@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{07934a85-8b61-443d-a0ee-b2eedb74f3cd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;hpj;bat;for;f90</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1d99675b-433d-4a21-9e50-ed4ab8b19762}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;fi;fd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{431c0958-fa71-44d0-9084-2d19d100c0cc}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;cnt;rtf;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmscam02.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmscgats.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmscnvrt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmserr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsgamma.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsgmt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmshalf.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsintrp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsio0.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsio1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmslut.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsmd5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsmtrx.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsnamed.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmspack.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmspcs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsplugin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsps2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmssamp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmssm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmstypes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsvirt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmswtpnt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(Lcms2SrcDir)\src\cmsxform.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(Lcms2SrcDir)\src\lcms2_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(Lcms2SrcDir)\include\lcms2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(Lcms2SrcDir)\include\lcms2_plugin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

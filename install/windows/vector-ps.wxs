@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<?define Manufacturer="Whole Group" ?>
+<?define ProductName="$(var.ProductFormat) Import Plugin" ?>
+<?define LicenseFile="../EULA.rtf" ?>
+<?define IconFile="../vector-ps.ico" ?>
+<?define ThankfulPage="http://www.wholegroup.com/thanks/" ?>
+
+<?if $(var.ProductFormat) = "SVG" ?>
+	<?define ProductFormatL="svg" ?>
+	<?define UpgradeCode="{c78c32f5-b046-4ef8-954f-6c24832bbde4}" ?>
+<?elseif  $(var.ProductFormat) = "WMF" ?>
+	<?define ProductFormatL="wmf" ?>
+	<?define UpgradeCode="{238653f8-1f61-4d58-a5e9-b9a48b033f47}" ?>
+<?elseif  $(var.ProductFormat) = "EMF" ?>
+	<?define ProductFormatL="emf" ?>
+	<?define UpgradeCode="{b93bf9a8-0a94-4682-97d0-8f7e05154aee}" ?>
+<?elseif  $(var.ProductFormat) = "WPG" ?>
+	<?define ProductFormatL="wpg" ?>
+	<?define UpgradeCode="{8c758cc7-41fc-487c-b461-dd315d78c2e7}" ?>
+<?elseif  $(var.ProductFormat) = "CDR" ?>
+	<?define ProductFormatL="cdr" ?>
+	<?define UpgradeCode="{ed59cdea-2bc2-4867-a4aa-c833b2b237a4}" ?>
+<?endif ?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+	<Product Id="*"
+				Language="1033"
+				Name="$(var.ProductName) $(var.ProductVersion)"
+				Version="$(var.ProductVersion)"
+				Manufacturer="$(var.Manufacturer)"
+				UpgradeCode="$(var.UpgradeCode)">
+
+		<Package Id="*"
+					InstallerVersion="300"
+					Compressed="yes"
+					Keywords="Installer,MSI,Database"
+					AdminImage="no"
+					Platform="$(var.Platform)" />
+
+		<Media Id="1" Cabinet="contents.cab" EmbedCab="yes" CompressionLevel="high"/>
+
+		<!-- Plugin Paths -->
+		<?if $(var.Platform) = "x86" ?>
+
+		<Property Id="PLUGINS32CS">
+			<RegistrySearch Id="RegistryPlugins32CS" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\8.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS2">
+			<RegistrySearch Id="RegistryPlugins32CS2" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\9.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS3">
+			<RegistrySearch Id="RegistryPlugins32CS3" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\10.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS4">
+			<RegistrySearch Id="RegistryPlugins32CS4" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\11.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS5">
+			<RegistrySearch Id="RegistryPlugins32CS5" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\12.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS6">
+			<RegistrySearch Id="RegistryPlugins32CS6" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\60.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CC">
+			<RegistrySearch Id="RegistryPlugins32CC" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\70.0\PluginPath" Type="directory" />
+		</Property>
+
+		<?else ?>
+
+		<Property Id="PLUGINS32CS">
+			<RegistrySearch Id="RegistryPlugins32CS" Root="HKLM" Key="SOFTWARE\Wow6432Node\Adobe\Photoshop\8.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS2">
+			<RegistrySearch Id="RegistryPlugins32CS2" Root="HKLM" Key="SOFTWARE\Wow6432Node\Adobe\Photoshop\9.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS3">
+			<RegistrySearch Id="RegistryPlugins32CS3" Root="HKLM" Key="SOFTWARE\Wow6432Node\Adobe\Photoshop\10.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS4">
+			<RegistrySearch Id="RegistryPlugins32CS4" Root="HKLM" Key="SOFTWARE\Wow6432Node\Adobe\Photoshop\11.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS5">
+			<RegistrySearch Id="RegistryPlugins32CS5" Root="HKLM" Key="SOFTWARE\Wow6432Node\Adobe\Photoshop\12.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CS6">
+			<RegistrySearch Id="RegistryPlugins32CS6" Root="HKLM" Key="SOFTWARE\Wow6432Node\Adobe\Photoshop\60.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS32CC">
+			<RegistrySearch Id="RegistryPlugins32CC" Root="HKLM" Key="SOFTWARE\Wow6432Node\Adobe\Photoshop\70.0\PluginPath" Type="directory" />
+		</Property>
+
+		<?endif ?>
+
+		<?if $(var.Platform) = "x64" ?>
+
+		<Property Id="PLUGINS64CS4">
+			<RegistrySearch Id="RegistryPlugins64CS4" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\11.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS64CS5">
+			<RegistrySearch Id="RegistryPlugins64CS5" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\12.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS64CS6">
+			<RegistrySearch Id="RegistryPlugins64CS6" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\60.0\PluginPath" Type="directory" />
+		</Property>
+
+		<Property Id="PLUGINS64CC">
+			<RegistrySearch Id="RegistryPlugins64CC" Root="HKLM" Key="SOFTWARE\Adobe\Photoshop\70.0\PluginPath" Type="directory" />
+		</Property>
+
+		<?endif ?>
+
+		<!-- 32 bit only for 32 bit -->
+		<?if $(var.Platform) = "x86" ?>
+		<Condition Message="The only 32-bit version of Windows supported.&#xD;&#xA;&#xD;&#xA;Please download the 64-bit installer.">
+			NOT VersionNT64
+		</Condition>
+		<?endif ?>
+
+		<!-- EMF doesn't work on Windows XP -->
+		<?if $(var.ProductFormat) = "EMF" ?>
+		<Condition Message="This application is only supported on Windows Vista or higher.">
+		    <![CDATA[Installed OR (VersionNT >= 600)]]>
+		</Condition>
+		<?endif ?>
+
+		<!-- CORE -->
+		<Feature Id="FeatureCommon" Title="$(var.ProductName) (Core)" Level="1" Display="hidden">
+			<ComponentRef Id="ComponentCommon" />
+			<ComponentRef Id="F.VectorCore" />
+
+			<MergeRef Id="VCRedist.32" />
+			<?if $(var.Platform) = "x64" ?>
+				<MergeRef Id="VCRedist.64" />
+			<?endif ?>
+
+			<?if  $(var.ProductFormat) = "WPG" ?>
+				<ComponentRef Id="F.DynamicLib.32.Wpg" />
+				<?if $(var.Platform) = "x64" ?>
+					<ComponentRef Id="F.DynamicLib.64.Wpg" />
+				<?endif ?>
+			<?endif ?>
+
+			<?if  $(var.ProductFormat) = "CDR" ?>
+				<ComponentRef Id="F.DynamicLib.32.Cdr" />
+				<?if $(var.Platform) = "x64" ?>
+					<ComponentRef Id="F.DynamicLib.64.Cdr" />
+				<?endif ?>
+			<?endif ?>
+
+			<ComponentGroupRef Id="F.VectorCoreLib" />
+			<?if $(var.IncludeJre) = "true" ?>
+				<ComponentGroupRef Id="F.Jre32" />
+				<?if $(var.Platform) = "x64" ?>
+				<ComponentGroupRef Id="F.Jre64" />
+				<?endif ?>
+			<?endif ?>
+		</Feature>
+
+		<!-- x86 plugin -->
+		<Feature Id="Feature32" Title="$(var.ProductName) (32-bit)" Level="1" Display="expand"
+					Description="$(var.ProductName) (32-bit)">
+			<Condition Level="0">NOT PLUGINS32CS AND NOT PLUGINS32CS2 AND NOT PLUGINS32CS3 AND NOT PLUGINS32CS4 AND NOT PLUGINS32CS5 AND NOT PLUGINS32CS6 AND NOT PLUGINS32CC</Condition>
+			<Feature Id="Feature32CS" Level="1" Title="Photoshop CS Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS.">
+				<Condition Level="0">NOT PLUGINS32CS</Condition>
+				<ComponentRef Id="Component32CS"/>
+			</Feature>
+			<Feature Id="Feature32CS2" Level="1" Title="Photoshop CS2 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS2.">
+				<Condition Level="0">NOT PLUGINS32CS2</Condition>
+				<ComponentRef Id="Component32CS2"/>
+			</Feature>
+			<Feature Id="Feature32CS3" Level="1" Title="Photoshop CS3 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS3.">
+				<Condition Level="0">NOT PLUGINS32CS3</Condition>
+				<ComponentRef Id="Component32CS3"/>
+			</Feature>
+			<Feature Id="Feature32CS4" Level="1" Title="Photoshop CS4 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS4.">
+				<Condition Level="0">NOT PLUGINS32CS4</Condition>
+				<ComponentRef Id="Component32CS4"/>
+			</Feature>
+			<Feature Id="Feature32CS5" Level="1" Title="Photoshop CS5 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS5.">
+				<Condition Level="0">NOT PLUGINS32CS5</Condition>
+				<ComponentRef Id="Component32CS5"/>
+			</Feature>
+			<Feature Id="Feature32CS6" Level="1" Title="Photoshop CS6 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS6.">
+				<Condition Level="0">NOT PLUGINS32CS6</Condition>
+				<ComponentRef Id="Component32CS6"/>
+			</Feature>
+			<Feature Id="Feature32CC" Level="1" Title="Photoshop CC Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CC.">
+				<Condition Level="0">NOT PLUGINS32CC</Condition>
+				<ComponentRef Id="Component32CC"/>
+			</Feature>
+		</Feature>
+
+		<!-- x64 plugin -->
+		<?if $(var.Platform) = "x64" ?>
+		<Feature Id="Feature64" Title="$(var.ProductName) (64-bit)" Level="1" Display="expand"
+					Description="$(var.ProductName) (64-bit)">
+			<Condition Level="0">NOT PLUGINS64CS4 AND NOT PLUGINS64CS5 AND NOT PLUGINS64CS6 AND NOT PLUGINS64CC</Condition>
+			<Feature Id="Feature64CS4" Level="1" Title="Photoshop CS4 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS4 (64-bit).">
+				<Condition Level="0">NOT PLUGINS64CS4</Condition>
+				<ComponentRef Id="Component64CS4"/>
+			</Feature>
+			<Feature Id="Feature64CS5" Level="1" Title="Photoshop CS5 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS5 (64-bit).">
+				<Condition Level="0">NOT PLUGINS64CS5</Condition>
+				<ComponentRef Id="Component64CS5"/>
+			</Feature>
+			<Feature Id="Feature64CS6" Level="1" Title="Photoshop CS6 Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CS6 (64-bit).">
+				<Condition Level="0">NOT PLUGINS64CS6</Condition>
+				<ComponentRef Id="Component64CS6"/>
+			</Feature>
+			<Feature Id="Feature64CC" Level="1" Title="Photoshop CC Plugin"
+						Description="Installs the $(var.ProductName) $(var.ProductVersion) for use with Adobe® Photoshop® CC (64-bit).">
+				<Condition Level="0">NOT PLUGINS64CC</Condition>
+				<ComponentRef Id="Component64CC"/>
+			</Feature>
+		</Feature>
+		<?endif ?>
+
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+				<Directory Id="ManufacturerFolder" Name="$(var.Manufacturer)">
+					<Directory Id="INSTALLDIR" Name="$(var.ProductName)">
+						<Component Id="ComponentCommon" Guid="{27c929bf-ea24-4d39-940f-9fba99d97380}" Win64="no">
+							<RegistryKey Root="HKLM" Key="SOFTWARE\$(var.Manufacturer)\$(var.ProductName)" ForceCreateOnInstall="yes">
+								<util:PermissionEx User="Users" GenericRead="yes" GenericWrite="yes" ChangePermission="yes" />
+								<RegistryValue Name="Path" Value="[INSTALLDIR]" Type="string" KeyPath="yes" />
+							</RegistryKey>
+						</Component>
+						<Directory Id="D.VectorCoreLib" Name="lib" />
+						<Component Id="F.VectorCore" Guid="{2a4f3acb-ef8e-45e3-9dc3-8ace8644a425}" Win64="no">
+							<File Source="$(var.VectorCore)\vector-core-$(var.ProductVersion).jar" />
+						</Component>
+						<Directory Id="D.32" Name="32">
+							<?if  $(var.ProductFormat) = "WPG" ?>
+								<Component Id="F.DynamicLib.32.Wpg" Guid="{57151231-9161-4d78-a7a9-a86b5b30876d}" Win64="no">
+									<File Id="libwpd.dll.32.Wpg" Source="$(var.BuildDir)\32\Release\libwpd.dll" />
+									<File Id="libwpg.dll.32.Wpg" Source="$(var.BuildDir)\32\Release\libwpg.dll" />
+								</Component>
+							<?endif ?>
+							<?if  $(var.ProductFormat) = "CDR" ?>
+								<Component Id="F.DynamicLib.32.Cdr" Guid="{3a576bb3-0a4a-433c-9119-84997e8b089c}" Win64="no">
+									<File Id="icu_common.dll.32.Cdr" Source="$(var.BuildDir)\32\Release\icu_common.dll" />
+									<File Id="icu_i18n.dll.32.Cdr" Source="$(var.BuildDir)\32\Release\icu_i18n.dll" />
+									<File Id="icu_stubdata.dll.32.Cdr" Source="$(var.BuildDir)\32\Release\icu_stubdata.dll" />
+									<File Id="lcms2.dll.32.Cdr" Source="$(var.BuildDir)\32\Release\lcms2.dll" />
+									<File Id="libcdr.dll.32.Cdr" Source="$(var.BuildDir)\32\Release\libcdr.dll" />
+									<File Id="libwpd.dll.32.Cdr" Source="$(var.BuildDir)\32\Release\libwpd.dll" />
+									<File Id="zlib.dll.32.Cdr" Source="$(var.BuildDir)\32\Release\zlib.dll" />
+								</Component>
+							<?endif ?>
+							<Directory Id="D.32.jre" Name="jre" />
+						</Directory>
+						<Directory Id="D.64" Name="64">
+							<?if $(var.Platform) = "x64" ?>
+								<?if  $(var.ProductFormat) = "WPG" ?>
+									<Component Id="F.DynamicLib.64.Wpg" Guid="{bfba1d57-2cf3-4414-8507-d67d152306a7}" Win64="no">
+										<File Id="libwpd.dll.64.Wpg" Source="$(var.BuildDir)\64\Release\libwpd.dll" />
+										<File Id="libwpg.dll.64.Wpg" Source="$(var.BuildDir)\64\Release\libwpg.dll" />
+									</Component>
+								<?endif ?>
+								<?if  $(var.ProductFormat) = "CDR" ?>
+									<Component Id="F.DynamicLib.64.Cdr" Guid="{607450b2-f232-4f97-90fc-30f3576d6dfa}" Win64="no">
+										<File Id="icu_common.dll.64.Cdr" Source="$(var.BuildDir)\64\Release\icu_common.dll" />
+										<File Id="icu_i18n.dll.64.Cdr" Source="$(var.BuildDir)\64\Release\icu_i18n.dll" />
+										<File Id="icu_stubdata.dll.64.Cdr" Source="$(var.BuildDir)\64\Release\icu_stubdata.dll" />
+										<File Id="lcms2.dll.64.Cdr" Source="$(var.BuildDir)\64\Release\lcms2.dll" />
+										<File Id="libcdr.dll.64.Cdr" Source="$(var.BuildDir)\64\Release\libcdr.dll" />
+										<File Id="libwpd.dll.64.Cdr" Source="$(var.BuildDir)\64\Release\libwpd.dll" />
+										<File Id="zlib.dll.64.Cdr" Source="$(var.BuildDir)\64\Release\zlib.dll" />
+									</Component>
+								<?endif ?>
+							<?endif ?>
+							<Directory Id="D.64.jre" Name="jre" />
+						</Directory>
+					</Directory>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS32CS" Name="[PLUGINS32CS]">
+				<Directory Id="FILEFORMATS32CS" Name="File Formats">
+					<Component Id="Component32CS" Guid="{b9edeaa9-1010-4630-bd01-d210e100d104}" Win64="no">
+						<File Id="File.32Cs.8bi" Source="$(var.BuildDir)\32\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS32CS2" Name="[PLUGINS32CS2]">
+				<Directory Id="FILEFORMATS32CS2" Name="File Formats">
+					<Component Id="Component32CS2" Guid="{cfcc2734-07a7-42bc-8d04-9f690844e55b}" Win64="no">
+						<File Id="File.32Cs2.8bi" Source="$(var.BuildDir)\32\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS32CS3" Name="[PLUGINS32CS3]">
+				<Directory Id="FILEFORMATS32CS3" Name="File Formats">
+					<Component Id="Component32CS3" Guid="{3cdc121a-3f5a-4c29-9726-cef1737675e3}" Win64="no">
+						<File Id="File.32Cs3.8bi" Source="$(var.BuildDir)\32\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS32CS4" Name="[PLUGINS32CS4]">
+				<Directory Id="FILEFORMATS32CS4" Name="File Formats">
+					<Component Id="Component32CS4" Guid="{aba490a0-d07c-4eda-bb61-59c3657e7f63}" Win64="no">
+						<File Id="File.32Cs4.8bi" Source="$(var.BuildDir)\32\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS32CS5" Name="[PLUGINS32CS5]">
+				<Directory Id="FILEFORMATS32CS5" Name="File Formats">
+					<Component Id="Component32CS5" Guid="{2d6ed46f-540e-4eb3-b362-d482327498f1}" Win64="no">
+						<File Id="File.32Cs5.8bi" Source="$(var.BuildDir)\32\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS32CS6" Name="[PLUGINS32CS6]">
+				<Directory Id="FILEFORMATS32CS6" Name="File Formats">
+					<Component Id="Component32CS6" Guid="{376efa74-27d9-4826-be14-ff5fce002575}" Win64="no">
+						<File Id="File.32Cs6.8bi" Source="$(var.BuildDir)\32\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS32CC" Name="[PLUGINS32CC]">
+				<Directory Id="FILEFORMATS32CC" Name="File Formats">
+					<Component Id="Component32CC" Guid="{195390de-a665-4eda-8fc1-233f523f3801}" Win64="no">
+						<File Id="File.32Cc.8bi" Source="$(var.BuildDir)\32\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<?if $(var.Platform) = "x64" ?>
+			<Directory Id="PLUGINS64CS4" Name="[PLUGINS64CS4]">
+				<Directory Id="FILEFORMATS64CS4" Name="File Formats">
+					<Component Id="Component64CS4" Guid="{5bf8ed95-afdc-49e4-909c-fa45635e5f9e}" Win64="no">
+						<File Id="File.64Cs4.8bi" Source="$(var.BuildDir)\64\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS64CS5" Name="[PLUGINS64CS5]">
+				<Directory Id="FILEFORMATS64CS5" Name="File Formats">
+					<Component Id="Component64CS5" Guid="{fe10722a-66e6-4845-89ea-289f98d4902f}" Win64="no">
+						<File Id="File.64Cs5.8bi" Source="$(var.BuildDir)\64\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS64CS6" Name="[PLUGINS64CS6]">
+				<Directory Id="FILEFORMATS64CS6" Name="File Formats">
+					<Component Id="Component64CS6" Guid="{56a65ecb-b1ab-45b3-8bd2-b9191ef42ed3}" Win64="no">
+						<File Id="File.64Cs6.8bi" Source="$(var.BuildDir)\64\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<Directory Id="PLUGINS64CC" Name="[PLUGINS64CC]">
+				<Directory Id="FILEFORMATS64CC" Name="File Formats">
+					<Component Id="Component64CC" Guid="{8a40259e-85fe-4f4a-af1b-d907c3fba5b2}" Win64="no">
+						<File Id="File.64Cc.8bi" Source="$(var.BuildDir)\64\$(var.Configuration)\vector-ps-$(var.ProductFormatL).8bi" />
+					</Component>
+				</Directory>
+			</Directory>
+			<?endif ?>
+		</Directory>
+
+		<DirectoryRef Id="TARGETDIR">
+			<Merge Id="VCRedist.32" SourceFile="Microsoft_VC100_CRT_x86.msm" DiskId="1" Language="0"/>
+			<?if $(var.Platform) = "x64" ?>
+				<Merge Id="VCRedist.64" SourceFile="Microsoft_VC100_CRT_x64.msm" DiskId="1" Language="0"/>
+			<?endif ?>
+		</DirectoryRef>	
+
+		<!-- Properties -->
+		<Property Id="ARPCOMMENTS" Value="$(var.ProductName) $(var.ProductVersion)" />
+		<Property Id="ARPCONTACT" Value="support@wholegroup.com" />
+		<Property Id="ARPPRODUCTICON" Value="IconFile" />
+		<Property Id="ARPHELPLINK" Value="http://www.wholegroup.com" />
+		<Property Id="ARPREADME" Value="http://www.wholegroup.com" />
+		<Property Id="ARPURLINFOABOUT" Value="http://www.wholegroup.com" />
+		<Property Id="ARPURLUPDATEINFO" Value="http://www.wholegroup.com" />
+		<Property Id="ARPHELPTELEPHONE" Value="+7 912 741 59 23" />
+		<Property Id="ARPAUTHORIZEDCDFPREFIX" Value="http://www.wholegroup.com" />
+		<Property Id="ALLUSERS" Value="1" />
+
+		<Icon Id="IconFile" SourceFile="$(var.IconFile)" />
+
+		<!-- UI -->
+		<WixVariable Id='WixUILicenseRtf' Value='$(var.LicenseFile)' />
+
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+		<UIRef Id="WixUI_Mondo" />
+
+		<!-- Upgrade -->
+		<Upgrade Id="$(var.UpgradeCode)">
+			<UpgradeVersion Minimum="$(var.ProductVersion)"
+								 IncludeMinimum="no"
+								 OnlyDetect="yes"
+								 Language="1033"
+								 Property="NEWPRODUCTFOUND" />
+
+			<UpgradeVersion Minimum="0.0.0"
+								 IncludeMinimum="yes"
+								 Maximum="$(var.ProductVersion)"
+								 IncludeMaximum="no"
+								 Language="1033"
+								 Property="UPGRADEFOUND" />
+		</Upgrade>
+
+		<!-- check a newest version -->
+		<CustomAction Id="PreventDowngrading" Error="A later version of $(var.ProductName) is already installed. Setup will now exit." />
+		<InstallExecuteSequence>
+			<Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
+			<RemoveExistingProducts Before="InstallInitialize">UPGRADEFOUND</RemoveExistingProducts>
+		</InstallExecuteSequence>
+
+		<InstallUISequence>
+			<Custom Action="PreventDowngrading" After="FindRelatedProducts">NEWPRODUCTFOUND</Custom>
+		</InstallUISequence>
+
+		<!-- run the thankful page -->
+		<CustomAction Id='SetURLToHelp' Property='WixShellExecTarget' Value="$(var.ThankfulPage)$(var.ProductFormatL)" />
+		<CustomAction Id='OpenHelpPage' BinaryKey='WixCA' DllEntry='WixShellExec' Impersonate='yes' />
+		<InstallExecuteSequence>
+			<Custom Action='SetURLToHelp' After='InstallFinalize'>NOT Installed AND NOT UPGRADEFOUND</Custom>
+			<Custom Action='OpenHelpPage' After='SetURLToHelp'>NOT Installed AND NOT UPGRADEFOUND</Custom>
+		</InstallExecuteSequence>
+
+	</Product>
+</Wix>

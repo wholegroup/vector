@@ -1,0 +1,58 @@
+0.1.x - 0.2.0
+
+- Rewrite the library to reuse wherever possible the libwpd types and  APIs.
+- Rewrite the libwpg API to be similar to the libwpd API where the arguments
+  are passed as pairs of attribute name and values.
+- Convert the embedded text inside graphics.
+- Remove implementation of stream abstraction class and use the libwpd'
+  WPXInputStream implementations.
+
+0.1.2 - 0.1.3
+
+- in WPG2, pseudo-handle polyspline: since we dont manage to generate it, 
+  we simply draw a polyline and wait for bug reports to give us some more
+  information (Fridrich).
+- change run-lenth decoding of bitmap code from using a manually allocated
+  buffer to a std::vector based solution for both WPG1 and WP2 (Fridrich).
+- robustness improvement of our bitmap parser when handling corrupted
+  documents (Fridrich, sum1).
+- when dumping binary objects and bitmaps in debug mode, don't crash when
+  the current directory is not writable for the user (Fridrich).
+- in WPG1 Bitmap decoding, handle also bitmaps with coulour depth 2 and 4,
+  which allows the FINGER.WPG test file to unveil its attractions (Fridrich). 
+- in WPG1, attempt to handle the embedded postscript (Fridrich).
+- in WPG1, handle bezier curves (Fridrich).
+- in WPG1, fix for pen styles (Fridrich).
+- in WPG2, don't assume 1200 dpi for embedded objects if the document specifies
+  a different one (Fridrich).
+- in WPG2, don't try to handle embedded WPG fragments as binary documents, since
+  nobody other out there handles them if we don't (Fridrich).
+- in WPG2, add some useful dump and debug capabilities and fix a wrong seek.
+- in spec file, require pkg-config (Fridrich).
+- let autogen.sh not call configure at all (Fridrich).
+- allow specifying the docdir and don't install documentation as executables (patch
+  Michal Marek <mmarek@suse.cz>)
+
+0.1.1 - 0.1.2
+- Work around an issue with relative seeks backward and certain versions of libstdc++
+  in the buffered stream implementation (Fridrich, sum1)
+- Fix regression in decoding of bitmap in WPG2 files (Fridrich, sum1).
+- Fix a bug in reading bitmap size in double precision WPG2 files (Fridrich, sum1).
+- Remove some abuse of pointers in wpg2foo tools (Fridrich).
+- Fix some signedness problems (Fridrich).
+- Fix some array-out-of-bond errors in decoding of bitmap with corrupted
+  WPG1 documents (Fridrich, sum1).
+- Add some sanity checks (Fridrich).
+
+0.1.0 - 0.1.1
+- Make win32 crosscompilation very smooth (Fridrich)
+- Implement win32 binary packaging using Makefile
+- Compile fixes for gcc 4.3
+- Fix a load of compiler warnings with Intel compiler, with Sun
+  Studio,...
+- Backport the bufferred file stream implementation from libwpd.
+- Make autogen.sh accept glibtoolize as a valid incarnation of libtoolize
+ 
+0.1.0 --> initial release
+- proper recognition of WPG files from WPD files (headers are practically the same)
+- initial WPG record support (lots of stuff is still unsupported)

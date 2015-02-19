@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# Build runtime and developer zipfiles for libwpg on Win32.
+
+ZIP=libwpg-@WPG_VERSION@-MinGW.zip
+DEVZIP=libwpg-devel-@WPG_VERSION@-MinGW.zip
+TOOLSZIP=libwpg-tools-@WPG_VERSION@.zip
+
+cd $DESTDIR@prefix@
+
+DLLDIR=lib
+[ -f bin/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@.dll ] && \
+DLLDIR=bin
+
+@STRIP@ --strip-all \
+$DLLDIR/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@.dll \
+bin/wpg2raw.exe \
+bin/wpg2svg.exe
+
+upx -qqq --best \
+$DLLDIR/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@.dll \
+bin/wpg2raw.exe \
+bin/wpg2svg.exe
+
+rm -f $ZIP
+zip -q -r $ZIP -@ <<EOF
+$DLLDIR/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@.dll
+EOF
+
+rm -f $DEVZIP
+zip -q -r $DEVZIP -@ <<EOF
+include/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@
+lib/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@.dll.a
+lib/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@.a
+lib/pkgconfig/libwpg-@WPG_MAJOR_VERSION@.@WPG_MINOR_VERSION@.pc
+EOF
+
+rm -f $TOOLSZIP
+zip -q -r -j $TOOLSZIP -@ <<EOF
+bin/wpg2raw.exe
+bin/wpg2svg.exe
+bin/wpg2svgbatch.exe
+EOF
+
+rm -f $TOOLSZIP
+zip -q -r -j $TOOLSZIP -@ <<EOF
+bin/wpg2raw.exe
+bin/wpg2svg.exe
+bin/wpg2svgbatch.pl
+EOF

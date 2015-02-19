@@ -1,0 +1,11 @@
+.deps
+.libs
+*.lo
+*.la
+Makefile
+Makefile.in
+cdr2raw
+cdr2raw.exe
+cmx2raw
+cmx2raw.exe
+*.rc

@@ -1,0 +1,14 @@
+#
+*.sdf
+*.opensdf
+*.iml
+*.suo
+*.aps
+*.vcxproj.user
+ipch/
+.idea/
+build/
+external/zlib-1.2.7/zconf.h
+external/zlib-1.2.7/zconf.h.included
+xcuserdata
+.DS_Store

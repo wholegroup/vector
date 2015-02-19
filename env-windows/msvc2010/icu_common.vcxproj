@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{554C5CA7-CBBE-4E8F-93A1-CB3B65ED7416}</ProjectGuid>
+    <ProjectName>icu_common</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir)\icu.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(IcuSrcDir)\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;U_ATTRIBUTE_DEPRECATED=;_CRT_SECURE_NO_DEPRECATE;U_COMMON_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <DisableSpecificWarnings>4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(IcuSrcDir)\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>N_DEBUG;WIN32;U_ATTRIBUTE_DEPRECATED=;_CRT_SECURE_NO_DEPRECATE;U_COMMON_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <DisableSpecificWarnings>4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(IcuSrcDir)\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;U_ATTRIBUTE_DEPRECATED=;_CRT_SECURE_NO_DEPRECATE;U_COMMON_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <DisableSpecificWarnings>4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(IcuSrcDir)\source\common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;U_ATTRIBUTE_DEPRECATED=;_CRT_SECURE_NO_DEPRECATE;U_COMMON_IMPLEMENTATION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableLanguageExtensions>true</DisableLanguageExtensions>
+      <DisableSpecificWarnings>4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(IcuSrcDir)\source\common\ubidi.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ubidi_props.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ubidiln.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ubidiwrt.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ushape.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\brkeng.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\brkiter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\dictbe.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbi.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbidata.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbinode.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbirb.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbiscan.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbisetb.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbistbl.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\rbbitblb.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\dictionarydata.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ubrk.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucol_swp.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\i18n;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="$(IcuSrcDir)\source\common\propsvec.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uarrsort.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uenum.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uhash.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uhash_us.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ulist.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustack.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustrenum.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\utrie.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\utrie2.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\utrie2_builder.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uvector.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uvectr32.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uvectr64.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\errorcode.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\icudataver.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\locmap.c">
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DisableLanguageExtensions>
+    </ClCompile>
+    <ClCompile Include="$(IcuSrcDir)\source\common\mutex.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\putil.cpp">
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DisableLanguageExtensions>
+    </ClCompile>
+    <ClCompile Include="$(IcuSrcDir)\source\common\umath.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\umutex.cpp">
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DisableLanguageExtensions>
+    </ClCompile>
+    <ClCompile Include="$(IcuSrcDir)\source\common\utrace.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\utypes.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\wintz.c">
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DisableLanguageExtensions>
+    </ClCompile>
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv2022.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_bld.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_cb.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_cnv.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_ct.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_err.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_ext.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_io.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_lmb.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_set.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_u16.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_u32.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_u7.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnv_u8.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvbocu.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvdisp.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvhz.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvisci.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvlat1.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvmbcs.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvscsu.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucnvsel.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\cmemory.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucln_cmn.c">
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DisableLanguageExtensions>
+    </ClCompile>
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucmndata.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\udata.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\udatamem.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\udataswp.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uinit.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\umapfile.c">
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</DisableLanguageExtensions>
+      <DisableLanguageExtensions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DisableLanguageExtensions>
+    </ClCompile>
+    <ClCompile Include="$(IcuSrcDir)\source\common\uobject.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\dtintrv.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\parsepos.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustrfmt.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\util.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\util_props.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\punycode.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uidna.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uts46.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\locavailable.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\locbased.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\locdispnames.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\locid.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\loclikely.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\locresdata.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\locutil.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\resbund.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\resbund_cnv.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucat.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uloc.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uloc_tag.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ures_cnv.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uresbund.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uresdata.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\caniter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\filterednormalizer2.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\normalizer2.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\normalizer2impl.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\normlzr.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unorm.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unorm_it.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unormcmp.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\bmpset.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\patternprops.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\propname.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ruleiter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucase.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uchar.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unames.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unifilt.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unifunct.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uniset.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uniset_closure.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uniset_props.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unisetspan.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uprops.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\usc_impl.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uscript.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uscript_props.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uset.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uset_props.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\usetiter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\icuplug.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\serv.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\servlk.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\servlkf.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\servls.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\servnotf.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\servrbf.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\servslkf.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\usprep.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\appendable.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\bytestream.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\bytestrie.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\bytestriebuilder.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\bytestrieiterator.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\chariter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\charstr.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\cstring.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\cwchar.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\messagepattern.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\schriter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\stringpiece.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\stringtriebuilder.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucasemap.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucasemap_titlecase_brkiter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucharstrie.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucharstriebuilder.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ucharstrieiterator.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uchriter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uinvchar.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\uiter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unistr.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unistr_case.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unistr_case_locale.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unistr_cnv.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unistr_props.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\unistr_titlecase_brkiter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustr_cnv.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustr_titlecase_brkiter.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustr_wcs.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustrcase.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustrcase_locale.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustring.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\ustrtrns.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\utext.cpp" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\utf_impl.c" />
+    <ClCompile Include="$(IcuSrcDir)\source\common\listformatter.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="icu_stubdata.vcxproj">
+      <Project>{88697fe0-2e9f-11e3-aa6e-0800200c9a66}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

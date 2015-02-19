@@ -1,0 +1,10 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: librevenge-@RVNG_MAJOR_VERSION@.@RVNG_MINOR_VERSION@
+Description: API library for generic document converters
+Version: @VERSION@
+Libs: -L${libdir} -lrevenge-@RVNG_MAJOR_VERSION@.@RVNG_MINOR_VERSION@
+Cflags: -I${includedir}/librevenge-@RVNG_MAJOR_VERSION@.@RVNG_MINOR_VERSION@

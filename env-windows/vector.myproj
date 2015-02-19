@@ -1,0 +1,207 @@
+﻿<Project DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildProjectDirectory)\msvc2010</SolutionDir>
+		<MavenPath Condition="'$(MavenPath)' == ''">d:\soft\apache-maven</MavenPath>
+		<WixInstallPath Condition="'$(WixInstallPath)' == ''">D:\Soft\wix37-binaries</WixInstallPath>
+		<Jdk32 Condition="'$(Jdk32)' == ''">d:\library\jdk_x86</Jdk32>
+		<Jdk64 Condition="'$(Jdk64)' == ''">d:\library\jdk</Jdk64>
+	</PropertyGroup>
+
+	<!-- Displays help -->
+	<Target Name="Default">
+		<PropertyGroup>
+			<HelpText><![CDATA[
+
+Script for building the Vector Project.
+
+* Cleaning the project:
+	msbuild /t:clean
+
+* Changing the project version:
+	msbuild /t:version /p:Version=1.0.0
+
+* Building the project:
+	msbuild /t:build
+
+* Complete:
+	msbuild /t:all
+
+			]]></HelpText>
+		</PropertyGroup>
+		<Message Text="$(HelpText)"/>
+	</Target>
+
+	<!-- Cleans -->
+	<Target Name="Clean">
+		<RemoveDir Directories="..\build" />
+	</Target>
+
+	<!-- Changes the project version -->
+	<Target Name="Version">
+		<Message Text=" "/>
+		<Message Text="Changing the project version on $(Version)."/>
+		<Message Text=" "/>
+
+		<PropertyGroup>
+			<VersionText><![CDATA[
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup Label="Globals">
+		<Version>$(Version)</Version>
+	</PropertyGroup>
+</Project>
+			]]></VersionText>
+			<VersionXcconfig><![CDATA[
+GCC_PREPROCESSOR_DEFINITIONS = PROJECT_VERSION=$(Version) %24(inherited)
+PROJECT_VERSION=$(Version)
+			]]></VersionXcconfig>
+		</PropertyGroup>
+		<WriteLinesToFile File="$(SolutionDir)\version.props" Lines="$(VersionText)" Overwrite="true" />
+		<WriteLinesToFile File="$(MSBuildProjectDirectory)\..\env-osx\version.xcconfig" Lines="$(VersionXcconfig)" Overwrite="true" />
+		<Exec Command="$(MavenPath)\bin\mvn versions:set -DnewVersion=$(Version) -DgenerateBackupPoms=false -DallowSnapshots=true"
+				WorkingDirectory="$(MSBuildProjectDirectory)\.." />
+	</Target>
+
+	<!-- Before building -->
+	<Target Name="Before">
+		<MakeDir Directories="$(MSBuildProjectDirectory)\..\build;$(MSBuildProjectDirectory)\..\build\resources" />
+
+		<!-- Copying test resources -->
+		<CreateItem Include="$(MSBuildProjectDirectory)\..\vector-jni-test\resources\**\*.*">
+			<Output TaskParameter="Include" ItemName="ResourcesToCopy" />
+		</CreateItem>
+		<CreateItem Include="$(MSBuildProjectDirectory)\..\vector-console-test\resources\**\*.*">
+			<Output TaskParameter="Include" ItemName="ResourcesToCopy" />
+		</CreateItem>
+		<Copy SourceFiles="@(ResourcesToCopy)" DestinationFiles="@(ResourcesToCopy->'$(MSBuildProjectDirectory)\..\build\resources\%(RecursiveDir)%(Filename)%(Extension)')" />
+	</Target>
+
+	<!-- Builds the projects -->
+	<Target Name="Build">
+		<Exec Command="$(MavenPath)\bin\mvn package -Dmaven.test.skip=true"
+				WorkingDirectory="$(MSBuildProjectDirectory)\.." />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseSvg;Platform=Win32"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseSvg;Platform=x64"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseWmf;Platform=Win32"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseWmf;Platform=x64"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseEmf;Platform=Win32"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseEmf;Platform=x64"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseWpg;Platform=Win32"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseWpg;Platform=x64"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseCdr;Platform=Win32"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(SolutionDir)\vector.sln"
+					Properties="Configuration=ReleaseCdr;Platform=x64"
+					Targets="Build"
+					StopOnFirstFailure="true" />
+	</Target>
+
+	<Target Name="Test">
+		<Exec Command="$(MavenPath)\bin\mvn test"
+				WorkingDirectory="$(MSBuildProjectDirectory)\.." />
+		<Exec Command="$(MSBuildProjectDirectory)\..\build\32\Release\vector-jni-test.exe"
+				WorkingDirectory="$(MSBuildProjectDirectory)\.." />
+		<Exec Command="$(MSBuildProjectDirectory)\..\build\32\Release\vector-console-test.exe"
+				WorkingDirectory="$(MSBuildProjectDirectory)\.." />
+		<Exec Command="$(MSBuildProjectDirectory)\..\build\64\Release\vector-jni-test.exe"
+				WorkingDirectory="$(MSBuildProjectDirectory)\.." />
+		<Exec Command="$(MSBuildProjectDirectory)\..\build\64\Release\vector-console-test.exe"
+				WorkingDirectory="$(MSBuildProjectDirectory)\.." />
+	</Target>
+
+	<Target Name="Distributive">
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseSvg;Platform=x86;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseSvg;Platform=x64;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseWmf;Platform=x86;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseWmf;Platform=x64;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseEmf;Platform=x86;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseEmf;Platform=x64;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseWpg;Platform=x86;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseWpg;Platform=x64;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseCdr;Platform=x86;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+
+		<MSBuild Projects="$(MSBuildProjectDirectory)\..\install\windows\vector-ps.wixproj"
+					Properties="Configuration=ReleaseCdr;Platform=x64;IncludeJre=true"
+					Targets="Rebuild"
+					StopOnFirstFailure="true" />
+	</Target>
+
+	<Target Name="After">
+		<Message Text=" " />
+		<Message Text="Congratulations! It's done!" />
+		<Message Text=" " />
+	</Target>
+
+	<Target Name="All" DependsOnTargets="Before;Build;Test;Distributive;After" />
+</Project>

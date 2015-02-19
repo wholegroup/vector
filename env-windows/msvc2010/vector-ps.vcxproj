@@ -1,0 +1,671 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSvg|Win32">
+      <Configuration>ReleaseSvg</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseSvg|x64">
+      <Configuration>ReleaseSvg</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseWmf|Win32">
+      <Configuration>ReleaseWmf</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseWmf|x64">
+      <Configuration>ReleaseWmf</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseEmf|Win32">
+      <Configuration>ReleaseEmf</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseEmf|x64">
+      <Configuration>ReleaseEmf</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseWpg|Win32">
+      <Configuration>ReleaseWpg</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseWpg|x64">
+      <Configuration>ReleaseWpg</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseCdr|Win32">
+      <Configuration>ReleaseCdr</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseCdr|x64">
+      <Configuration>ReleaseCdr</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\vector-ps\common.cpp" />
+    <ClCompile Include="..\..\vector-ps\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\vector-ps\ui.cpp" />
+    <ClCompile Include="..\..\vector-ps\vector-ps-prf.cpp" />
+    <ClCompile Include="..\..\vector-ps\vector-ps.cpp" />
+    <ClCompile Include="..\..\vector-ps\version.cpp" />
+    <ClCompile Include="..\..\vector-ps\win\about_dialog.cpp" />
+    <ClCompile Include="..\..\vector-ps\win\settings_dialog.cpp" />
+    <ClCompile Include="..\..\vector-ps\win\ui_win.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\vector-ps\suite.h" />
+    <ClInclude Include="..\..\vector-ps\vector-ps-prf.h" />
+    <ClInclude Include="..\..\vector-ps\win\resource.h" />
+    <ClInclude Include="..\..\vector-ps\stdafx.h" />
+    <ClInclude Include="..\..\vector-ps\ui.h" />
+    <ClInclude Include="..\..\vector-ps\version.h" />
+    <ClInclude Include="..\..\vector-ps\win\about_dialog.h" />
+    <ClInclude Include="..\..\vector-ps\win\gdi_object.h" />
+    <ClInclude Include="..\..\vector-ps\win\settings_dialog.h" />
+    <ClInclude Include="..\..\vector-ps\win\ui_win.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\vector-ps\win\vector-ps.rc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'">$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'">$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'">$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\vector-ps\res\bg.bmp" />
+    <None Include="..\..\vector-ps\res\size.cur" />
+    <None Include="..\..\vector-ps\res\size_link.ico" />
+    <None Include="..\..\vector-ps\res\sRGB.icm" />
+    <CustomBuild Include="..\..\vector-ps\vector-ps.r">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).pipl"
+del "$(IntDir)%(Filename).rr"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)%(Filename).pipl;</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">
+      </Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">
+      </Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">
+      </Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">
+      </Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)%(Filename).pipl"
+del "$(IntDir)%(Filename).rr"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename).pipl</Outputs>
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vector-ps\vector-ps-svg.r">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">$(IntDir)vector-ps.pipl;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">$(IntDir)vector-ps.pipl;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vector-ps\vector-ps-wmf.r">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">$(IntDir)vector-ps.pipl</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">$(IntDir)vector-ps.pipl</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vector-ps\vector-ps-emf.r">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'">$(IntDir)vector-ps.pipl</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'">$(IntDir)vector-ps.pipl</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vector-ps\vector-ps-wpg.r">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'">$(IntDir)vector-ps.pipl</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'">$(IntDir)vector-ps.pipl</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\..\vector-ps\vector-ps-cdr.r">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'">$(IntDir)vector-ps.pipl</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'">cl /I"$(PsSdk)/photoshopapi/photoshop" /I"$(PsSdk)/photoshopapi/pica_sp" /I"$(PsSdk)/photoshopapi/resources" /I"$(PsSdk)/samplecode/common/includes" /I"$(PsSdk)/samplecode/common/sources" /I"$(PsSdk)/samplecode/common/resources" /EP /DMSWindows=1 /Tc"%(FullPath)" &gt; "$(IntDir)%(Filename).rr"
+"$(PsSdk)/samplecode/resources/Cnvtpipl.exe" "$(IntDir)%(Filename).rr" "$(IntDir)vector-ps.pipl"
+del "$(IntDir)%(Filename).rr"
+</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'">Compiling PiPL resource...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'">$(IntDir)vector-ps.pipl</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="libcdr.vcxproj">
+      <Project>{b5f43a54-7587-4fc4-8a21-ef5014c17a11}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libwpd.vcxproj">
+      <Project>{a1defd68-c926-410f-b47c-9cfa848a89f5}</Project>
+    </ProjectReference>
+    <ProjectReference Include="libwpg.vcxproj">
+      <Project>{1f6924be-2fa2-4d57-9e37-a233e26bb03b}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vector-jni.vcxproj">
+      <Project>{4fd99384-facc-4c74-8d86-e15ec0ac1817}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{94361B3C-42E9-43DC-AD15-F04F03A6CE74}</ProjectGuid>
+    <RootNamespace>vector-ps</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectName>vector-ps</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(SolutionDir)\photoshopsdk.props" />
+  <Import Project="$(SolutionDir)\jdk.props" />
+  <Import Project="$(SolutionDir)\version.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>Windows7.1SDK</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk_x86)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk)\include;$(Jdk)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk_x86)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-svg</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk_x86)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-wmf</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk_x86)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-emf</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk_x86)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-wpg</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'">
+    <OutDir>$(SolutionDir)..\..\build\32\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk_x86)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-cdr</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-svg</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-wmf</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-emf</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-wpg</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'">
+    <OutDir>$(SolutionDir)..\..\build\64\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)$(ProjectName)\</IntDir>
+    <IncludePath>$(Jdk)\include;$(Jdk_x86)\include\win32;$(IncludePath)</IncludePath>
+    <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.8bi</TargetExt>
+    <TargetName>$(ProjectName)-cdr</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_SVG;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_EMF;WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDll</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Lib>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_SVG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_WMF;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_EMF;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_WPG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_CDR;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseSvg|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_SVG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWmf|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_WMF;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseEmf|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_EMF;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWpg|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_WPG;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseCdr|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..\$(ProjectName);$(PsSdk)\photoshopapi\photoshop;$(PsSdk)\photoshopapi\pica_sp;$(PsSdk)\photoshopapi\resources;$(PsSdk)\samplecode\common\includes;$(PsSdk)\samplecode\common\sources;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PROJECT_VERSION=$(Version);BUILD_CDR;WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalOptions> /Zm200 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(OutDir)$(ProjectName)\</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalDependencies>Gdiplus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>libcdr.dll;libwpd.dll;libwpg.dll;Gdiplus.dll</DelayLoadDLLs>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

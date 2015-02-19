@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!--
+/*
+    Copyright 2005-2006 Adobe Systems Incorporated
+    Distributed under the MIT License (see accompanying file LICENSE_1_0_0.txt
+    or a copy at http://opensource.adobe.com/licenses.html)
+*/
+Some files are held under additional license. Please see "licenses.html" for more information.
+-->
+
+<head>
+    <TITLE>Adobe Photoshop SDK: PIProperties.h Source File</TITLE>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html;charset=ISO-8859-1"/>
+    <LINK TYPE="text/css" REL="stylesheet" HREF="basic.css"/>
+    <STYLE TYPE="text/css" MEDIA="all"><!--
+        @import url("modern.css");
+    --></STYLE>
+    <LINK TYPE="text/css" REL="stylesheet" HREF="print.css" MEDIA="print"/>
+    <LINK TYPE="text/css" REL="stylesheet" HREF="mainnav.css"/>
+    <LINK TYPE="text/css" REL="stylesheet" HREF="stlab.css"/>
+	<LINK TYPE="text/css" REL="stylesheet" HREF="adobetabs.css"/>
+<!-- 
+    <LINK REL="alternate" TITLE="opensource.adobe.com RSS" HREF="http://sourceforge.net/export/rss2_projnews.php?group_id=132417&amp;rss_fulltext=1" TYPE="application/rss+xml"/>
+-->
+</HEAD>
+
+<body bgcolor="white">
+
+<div id="mainnav" width="100%">
+<table width="100%" border="0"><tr><td width="50%">
+<a title="Adobe Systems home page" href="http://www.adobe.com/" tabindex="2"><img src="images/logo.gif" alt="Adobe Systems, Inc." height="80" width="150"/></a>
+</td><td align="right" valign="top">
+<a href="index.html" class="el" target="_top"><font size="+2" color="black">Adobe Photoshop SDK</font></a><br/>
+<!--
+<a href="http://opensource.adobe.com" class="el" target="_top"><font size="-2" color="black">opensource.adobe.com</font></a>
+-->
+</td></tr></table>
+
+</div>
+<br/>
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tr><td width="10" nowrap="1"> </td>
+<td valign="top">
+    <table border="0" bgcolor=#ededed cellpadding="5">
+    <tr><td nowrap="1">
+        <h3 class="navbar">Getting Started</h3>
+        <ul>
+            <li><a href="ProgrammersGuideIntro.html">Home</a></li>
+            <li><a href="index.html">New for CS6</a></li>
+	        <li><a href="SixtyFourMacintosh.html">Making 64 bit plug-ins for Macintosh</a></li>
+	        <li><a href="SixtyFour.html">Making 64 bit plug-ins for Windows</a></li>
+            <li><a href="faqs.html">Frequently Asked Questions</a></li>
+            <li><a href="tutorialsexamples.html">Tutorials and Examples</a></li>
+			<li><a href="DeveloperResources.html">Developer Resources</a></li>
+        </ul>
+        <h3 class="navbar">SDK API Reference</h3>
+        <ul>
+			<li><a href="annotated.html">Data Structure List</a></li>
+		    <li><a href="classes.html">Data Structure Index</a></li>
+			<li><a href="functions.html">Member Index</a></li>
+			<li><a href="files.html">File List</a></li>
+		    <li><a href="globals.html">File Member Index</a></li>
+        </ul>
+        <h3 class="navbar">SDK API Features</h3>
+        <ul>
+            <li><a href="rgcallbacks.html">Callbacks</a></li>
+			<li><a href="pluginmodules.html">Plug-in Modules</a></li>
+		    <li><a href="memorymanagement.html">Memory Management</a></li>
+			<li><a href="resourcemanagement.html">Resource Management</a></li>
+			<li><a href="pixelmanagement.html">Pixel Management</a></li>
+			<li><a href="colormanagement.html">Color Management</a></li>
+			<li><a href="automation.html">Actions and Automation</a></li>
+			<li><a href="filehandling.html">File Handling</a></li>
+        </ul>
+<!--  Moved to link under "Other Documentation"
+        <h3 class="navbar">Progammer's Guide</h3>
+        <ul>
+            <li><a href="PGPlugInBasics.html">Plug-in Basics</a></li>
+            <li><a href="PGPlugInTypes.html">Plug-in Types</a></li>
+            <li><a href="PGPlugInInterface.html">Plug-in Interface</a></li>
+            <li><a href="PGMemoryMgmtStrategies.html">Memory Management Strategies</a></li>
+            <li><a href="PGMacOSPlugins.html">Creating Mac OS Plug-ins</a></li>
+            <li><a href="PGWinPlugins.html">Creating Windows Plug-ins</a></li>
+            <li><a href="PGCallbacks.html">Callbacks and Callback Suites</a></li>
+            <li><a href="PGWritingPlugins.html">Writing Plug-ins</a></li>
+			<li><a href="PGScriptingPlugins.html">Scripting Plug-ins</a>
+		    <li><a href="pgpiplresources.html">Creating PiPL Resources</a></li>
+		    <li><a href="pgsamplecode.html">Sample Code</a></li>
+		    <li><a href="glossary.html">Glossary of Acronyms</a></li>
+        </ul>
+-->
+        <h3 class="navbar">Other Documentation</h3>
+        <ul>
+          <li><a href="MachOConversion.html">Converting to Mach-O format</a></li>
+          <li><a href="MakingXCodeProjects.html">Making XCode Projects for Mac OS</a></li>
+          <li><a href="ProgrammersGuideMain.html">SDK Programmer's Guide</a></li>
+		      <li><a href="../PICA.pdf">Adobe PICA API</a>
+        </ul>
+<!--  Moved to Link under "Getting Started".
+        <h3 class="navbar">Developer Resources</h3>
+        <ul>
+			<li><a href="http://partners.adobe.com/public/developer/photoshop/devcenter.html">Adobe Photoshop Developer Center</a>
+            <li><a href="mailinglistandforum.html">Suppport</a></li>
+            <li><a href="technicalnotes.html">Technical Notes</a></li>
+            <li><a href="license.html">SDK License Agreements</a></li>
+        </ul>
+-->
+    </td></tr>
+    </table>
+</td>
+
+<td width="10" nowrap="1"> </td>
+<td width="100%" valign="top">
+
+<!-- End Header -->
+
+<!-- Generated by Doxygen 1.4.7 -->
+<h1>PIProperties.h</h1><a href="_p_i_properties_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">// ADOBE SYSTEMS INCORPORATED</span>
+<a name="l00002"></a>00002 <span class="comment">// Copyright  1993 - 2005 Adobe Systems Incorporated</span>
+<a name="l00003"></a>00003 <span class="comment">// All Rights Reserved</span>
+<a name="l00004"></a>00004 <span class="comment">//</span>
+<a name="l00005"></a>00005 <span class="comment">// NOTICE:  Adobe permits you to use, modify, and distribute this </span>
+<a name="l00006"></a>00006 <span class="comment">// file in accordance with the terms of the Adobe license agreement</span>
+<a name="l00007"></a>00007 <span class="comment">// accompanying it.  If you have received this file from a source</span>
+<a name="l00008"></a>00008 <span class="comment">// other than Adobe, then your use, modification, or distribution</span>
+<a name="l00009"></a>00009 <span class="comment">// of it requires the prior written permission of Adobe.</span>
+<a name="l00010"></a>00010 <span class="comment">//-------------------------------------------------------------------</span>
+<a name="l00027"></a>00027 <span class="comment"></span><span class="preprocessor">#ifndef __PIProperties_h__ // Already defined?</span>
+<a name="l00028"></a>00028 <span class="preprocessor"></span><span class="preprocessor">#define __PIProperties_h__</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span>
+<a name="l00030"></a>00030 <span class="preprocessor">#if PRAGMA_ONCE</span>
+<a name="l00031"></a>00031 <span class="preprocessor"></span><span class="preprocessor">#pragma once</span>
+<a name="l00032"></a>00032 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00033"></a>00033 <span class="preprocessor"></span>
+<a name="l00034"></a>00034 <span class="comment">//-------------------------------------------------------------------------------</span>
+<a name="l00041"></a>00041 <span class="comment"></span>
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 
+<a name="l00044"></a><a class="code" href="group___property_keys.html#gf92e5f91620d0e32950415a2df7015ae">00044</a> <span class="preprocessor">#define propNumberOfChannels  'nuch'</span>
+<a name="l00045"></a>00045 <span class="preprocessor"></span>
+<a name="l00049"></a><a class="code" href="group___property_keys.html#gb8620cb3429feb609c2acce5eeb55ac5">00049</a> <span class="preprocessor">#define propChannelName       'nmch'</span>
+<a name="l00050"></a>00050 <span class="preprocessor"></span>
+<a name="l00053"></a><a class="code" href="group___property_keys.html#g6ae31239525ecd2e3c4e6cda5dfe0d64">00053</a> <span class="preprocessor">#define propUnicodeChannelName 'unch'</span>
+<a name="l00054"></a>00054 <span class="preprocessor"></span>
+<a name="l00058"></a><a class="code" href="group___property_keys.html#gafc7db27bc95eff4b2f174073ebd5011">00058</a> <span class="preprocessor">#define propTargetLayerLock   'tllk'</span>
+<a name="l00060"></a>00060 <span class="preprocessor"></span>
+<a name="l00064"></a>00064 <span class="preprocessor"></span>
+<a name="l00065"></a><a class="code" href="group___target_layer_lock_bits.html#gdb64f1dee2d18ac922bd45a6bb968073">00065</a> <span class="preprocessor">#define propTargetLayerLockNone                 0x0       </span>
+<a name="l00066"></a><a class="code" href="group___target_layer_lock_bits.html#g0f70c38a46ce56313430c9101c8fdfab">00066</a> <span class="preprocessor">#define propTargetLayerLockTransparency         0x1 &lt;&lt; 0  </span>
+<a name="l00067"></a><a class="code" href="group___target_layer_lock_bits.html#ge739aab56f9b59a8ad9a80527044deaa">00067</a> <span class="preprocessor">#define propTargetLayerLockComposite            0x1 &lt;&lt; 1  </span>
+<a name="l00068"></a><a class="code" href="group___target_layer_lock_bits.html#g6972e0720edbd465729e4138e0fd9789">00068</a> <span class="preprocessor">#define propTargetLayerLockPosition             0x1 &lt;&lt; 2  </span>
+<a name="l00070"></a>00070 <span class="preprocessor"></span>
+<a name="l00073"></a>00073 <span class="preprocessor"></span>
+<a name="l00075"></a><a class="code" href="group___property_keys.html#g91b305c172e95f043c9a3ed0b502295b">00075</a> <span class="preprocessor">#define propImageMode         'mode'</span>
+<a name="l00076"></a>00076 <span class="preprocessor"></span>
+<a name="l00079"></a><a class="code" href="group___property_keys.html#g6b2ea15b985f4e69511eb5b9ea3286d5">00079</a> <span class="preprocessor">#define propNumberOfPaths     'nupa'</span>
+<a name="l00080"></a>00080 <span class="preprocessor"></span>
+<a name="l00084"></a><a class="code" href="group___property_keys.html#g30d9b74dd1d4e0fe091d1d4f25781b8a">00084</a> <span class="preprocessor">#define propPathName          'nmpa'</span>
+<a name="l00085"></a>00085 <span class="preprocessor"></span>
+<a name="l00088"></a><a class="code" href="group___property_keys.html#gcbe16037b80a6a9265923ae08eda6237">00088</a> <span class="preprocessor">#define propUnicodePathName   'unmp'</span>
+<a name="l00089"></a>00089 <span class="preprocessor"></span>
+<a name="l00091"></a>00091 
+<a name="l00097"></a><a class="code" href="group___property_keys.html#g29422c68ee0626cb4020091e485e7bfa">00097</a> <span class="preprocessor">#define propPathContents      'path'</span>
+<a name="l00098"></a>00098 <span class="preprocessor"></span>
+<a name="l00103"></a><a class="code" href="group___property_keys.html#g4b696c5f3e51d3225f5878caaeb6ab67">00103</a> <span class="preprocessor">#define propPathContentsAI    'paAI'</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00108"></a><a class="code" href="group___property_keys.html#gb5a0b3328bc57a29654e64710b665781">00108</a> <span class="preprocessor">#define propWorkPathIndex     'wkpa'</span>
+<a name="l00109"></a>00109 <span class="preprocessor"></span>
+<a name="l00113"></a><a class="code" href="group___property_keys.html#g4b07fd4c802fdaacea67918e346e91dc">00113</a> <span class="preprocessor">#define propClippingPathIndex 'clpa'</span>
+<a name="l00114"></a>00114 <span class="preprocessor"></span>
+<a name="l00118"></a><a class="code" href="group___property_keys.html#g8a7421cac763d858e4cd84427bb128db">00118</a> <span class="preprocessor">#define propTargetPathIndex   'tgpa'</span>
+<a name="l00119"></a>00119 <span class="preprocessor"></span>
+<a name="l00124"></a><a class="code" href="group___property_keys.html#g3edd62af2c7c06f669b6a313145f3715">00124</a> <span class="preprocessor">#define propCaption           'capt'</span>
+<a name="l00125"></a>00125 <span class="preprocessor"></span>
+<a name="l00129"></a><a class="code" href="group___property_keys.html#g08dbd0e8c15cd439cb2c68f11e8a8611">00129</a> <span class="preprocessor">#define propXMP               'xmpd'</span>
+<a name="l00130"></a>00130 <span class="preprocessor"></span>
+<a name="l00135"></a><a class="code" href="group___property_keys.html#g69bbad0a5ad13e970e4bd1d4b46d4b99">00135</a> <span class="preprocessor">#define propBigNudgeH         'bndH'                                                 </span>
+<a name="l00136"></a>00136 <span class="preprocessor"></span>
+<a name="l00140"></a><a class="code" href="group___property_keys.html#g39dc541088c08c0f66eacff2bcf7aff4">00140</a> <span class="preprocessor">#define propBigNudgeV         'bndV'</span>
+<a name="l00141"></a>00141 <span class="preprocessor"></span>
+<a name="l00145"></a><a class="code" href="group___property_keys.html#g302ca7615311b836b512fa544e86d0eb">00145</a> <span class="preprocessor">#define propInterpolationMethod 'intp'</span>
+<a name="l00146"></a>00146 <span class="preprocessor"></span>
+<a name="l00150"></a><a class="code" href="group___property_keys.html#gea4e4e4e299ad1cbc00bdb32107f4122">00150</a> <span class="preprocessor">#define propRulerUnits          'rulr'</span>
+<a name="l00152"></a>00152 <span class="preprocessor"></span>
+<a name="l00153"></a>00153 <span class="preprocessor"></span>
+<a name="l00154"></a><a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32e">00154</a> <span class="keyword">typedef</span> <span class="keyword">enum</span>
+<a name="l00155"></a>00155     {
+<a name="l00156"></a>00156     <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32ed556ac3d9f088f53939a543c1e69d344">kRulerPixels</a>,              
+<a name="l00157"></a>00157     <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32e79359acd0e3fa9196d256c11de2d89b5">kRulerInches</a>,              
+<a name="l00158"></a>00158     <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32e4d42437087fab43ed8b1805f681a1739">kRulerCm</a>,                  
+<a name="l00159"></a>00159     <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32eaf28a4af97b67010623b0df1a70a0259">kRulerMillimeters</a>,         
+<a name="l00160"></a>00160     <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32efc21ef45f46bb4d1489c4433315b25f3">kRulerPoints</a>,              
+<a name="l00161"></a>00161     <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32eaead27395fb3333956fb58af4234a6b4">kRulerPicas</a>,               
+<a name="l00162"></a><a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32edf2a75f131a5f92d530525fae49f5ae5">00162</a>     <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32edf2a75f131a5f92d530525fae49f5ae5">kRulerPercent</a>              
+<a name="l00163"></a>00163     } <a class="code" href="_p_i_properties_8h.html#5004456123cb3f9e0d4f6b79b976b32e">RulerUnits</a>;
+<a name="l00164"></a>00164 
+<a name="l00167"></a>00167 
+<a name="l00170"></a><a class="code" href="group___property_keys.html#g1f7c4248c259fe11494b3edceafa205e">00170</a> <span class="preprocessor">#define propRulerOriginH        'rorH'</span>
+<a name="l00171"></a>00171 <span class="preprocessor"></span>
+<a name="l00174"></a><a class="code" href="group___property_keys.html#g32c9d2b0f4daae6d2c8c0b6dbda0d5ed">00174</a> <span class="preprocessor">#define propRulerOriginV        'rorV'</span>
+<a name="l00175"></a>00175 <span class="preprocessor"></span>
+<a name="l00180"></a><a class="code" href="group___property_keys.html#g09531e27fbf796325d924bd05543c787">00180</a> <span class="preprocessor">#define propGridMajor           'grmj'</span>
+<a name="l00181"></a>00181 <span class="preprocessor"></span>
+<a name="l00184"></a><a class="code" href="group___property_keys.html#g05baefebd253ea746a9e74e984440051">00184</a> <span class="preprocessor">#define propGridMinor           'grmn'</span>
+<a name="l00185"></a>00185 <span class="preprocessor"></span>
+<a name="l00190"></a><a class="code" href="group___property_keys.html#g683e75a801873d2b9880f959765fe271">00190</a> <span class="preprocessor">#define propSerialString        'sstr'</span>
+<a name="l00191"></a>00191 <span class="preprocessor"></span>
+<a name="l00195"></a><a class="code" href="group___property_keys.html#gfd2a5747a4dec4a0955bfcc27dffb871">00195</a> <span class="preprocessor">#define propSerialString2       'sstR'</span>
+<a name="l00196"></a>00196 <span class="preprocessor"></span>
+<a name="l00200"></a><a class="code" href="group___property_keys.html#g30ef1fe184f4115f47d1ef38870c3a41">00200</a> <span class="preprocessor">#define propHardwareGammaTable  'hgam'</span>
+<a name="l00201"></a>00201 <span class="preprocessor"></span>
+<a name="l00219"></a><a class="code" href="group___property_keys.html#gea4cc75cee35192bf5b49441e2169081">00219</a> <span class="preprocessor">#define propInterfaceColor      'iclr'</span>
+<a name="l00220"></a>00220 <span class="preprocessor"></span>
+<a name="l00226"></a><a class="code" href="group___property_keys.html#g11d80908b49050a24a3326aecedc48f0">00226</a> <span class="preprocessor">#define propWatchSuspension     'wtch'</span>
+<a name="l00227"></a>00227 <span class="preprocessor"></span>
+<a name="l00232"></a><a class="code" href="group___property_keys.html#g09a157931602ffe17338001060c3478a">00232</a> <span class="preprocessor">#define propCopyright           'cpyr'</span>
+<a name="l00233"></a>00233 <span class="preprocessor"></span>
+<a name="l00236"></a><a class="code" href="group___property_keys.html#g6069503c840dd94cdf11135b7900e493">00236</a> <span class="preprocessor">#define propCopyright2          'cpyR'</span>
+<a name="l00237"></a>00237 <span class="preprocessor"></span>
+<a name="l00244"></a><a class="code" href="group___property_keys.html#gebcc4f158280d072cfd42e499e80db90">00244</a> <span class="preprocessor">#define propWatermark           'watr'</span>
+<a name="l00245"></a>00245 <span class="preprocessor"></span>
+<a name="l00248"></a><a class="code" href="group___property_keys.html#g830082e1d9686d5e3751242ee5407e96">00248</a> <span class="preprocessor">#define propURL                 'URL '</span>
+<a name="l00249"></a>00249 <span class="preprocessor"></span>
+<a name="l00253"></a><a class="code" href="group___property_keys.html#g458ff3eacc13be3553576f13a3918fe8">00253</a> <span class="preprocessor">#define propTitle               'titl'</span>
+<a name="l00254"></a>00254 <span class="preprocessor"></span>
+<a name="l00258"></a><a class="code" href="group___property_keys.html#gc5679f02a2cfab65437a444d2fa1701c">00258</a> <span class="preprocessor">#define propDocumentWidth       'docW'</span>
+<a name="l00259"></a>00259 <span class="preprocessor"></span>
+<a name="l00263"></a><a class="code" href="group___property_keys.html#g4d7964b869804a3730fb106cf942ef75">00263</a> <span class="preprocessor">#define propDocumentHeight      'docH'</span>
+<a name="l00264"></a>00264 <span class="preprocessor"></span>
+<a name="l00269"></a><a class="code" href="group___property_keys.html#g66c3b43c1102c0e2d4ec81108174da4d">00269</a> <span class="preprocessor">#define propSlices              'slcs'</span>
+<a name="l00270"></a>00270 <span class="preprocessor"></span>
+<a name="l00274"></a><a class="code" href="group___property_keys.html#g0d82b71e28971af63ce98227194427ef">00274</a> <span class="preprocessor">#define propSelectedSliceID     'slid'</span>
+<a name="l00275"></a>00275 <span class="preprocessor"></span>
+<a name="l00279"></a><a class="code" href="group___property_keys.html#ge29abd6184490822817ccb6630f25579">00279</a> <span class="preprocessor">#define propSelectedSliceIDList 'slis'</span>
+<a name="l00280"></a>00280 <span class="preprocessor"></span>
+<a name="l00284"></a><a class="code" href="group___property_keys.html#ge8015a2aafef8dae352a86a702b90fff">00284</a> <span class="preprocessor">#define propSelectedSliceIndex  'slin'</span>
+<a name="l00285"></a>00285 <span class="preprocessor"></span>
+<a name="l00286"></a>00286 <span class="comment">// Whether the slice numers are show (Simple)</span>
+<a name="l00290"></a><a class="code" href="group___property_keys.html#gb504d40585fb530db1e4ff2ac3198e7d">00290</a> <span class="comment"></span><span class="preprocessor">#define propShowSliceNumbers    'slsh'</span>
+<a name="l00291"></a>00291 <span class="preprocessor"></span>
+<a name="l00295"></a><a class="code" href="group___property_keys.html#gfc8ebb5d4bcbd63678f1a368d1037837">00295</a> <span class="preprocessor">#define propSliceLineColor      'sllc'</span>
+<a name="l00296"></a>00296 <span class="preprocessor"></span>
+<a name="l00300"></a><a class="code" href="group___property_keys.html#g895512f2eba8b905f39e2d90dcd6ba9f">00300</a> <span class="preprocessor">#define propToolTips            'tltp'</span>
+<a name="l00301"></a>00301 <span class="preprocessor"></span>
+<a name="l00305"></a><a class="code" href="group___property_keys.html#ga242aba702a3383168d99405d60e688e">00305</a> <span class="preprocessor">#define propPaintCursorKind     'PCrK'</span>
+<a name="l00306"></a>00306 <span class="preprocessor"></span>
+<a name="l00310"></a><a class="code" href="group___property_keys.html#g8b526827f55a9e821cdaef21684513d2">00310</a> <span class="preprocessor">#define propPaintCursorShape    'PCrS'</span>
+<a name="l00311"></a>00311 <span class="preprocessor"></span>
+<a name="l00312"></a>00312 <span class="comment">// Is the cursor crosshair always visible (Simple)</span>
+<a name="l00313"></a>00313 <span class="comment">// 0 - no</span>
+<a name="l00314"></a>00314 <span class="comment">// 1 - yes</span>
+<a name="l00319"></a><a class="code" href="group___property_keys.html#ge9454adad51d60bfbae0701a8e17fbb8">00319</a> <span class="comment"></span><span class="preprocessor">#define propPaintCursorCrosshair    'PCrC'</span>
+<a name="l00320"></a>00320 <span class="preprocessor"></span>
+<a name="l00321"></a>00321 
+<a name="l00330"></a><a class="code" href="group___property_keys.html#gc0840f373f0c928903ccd00c85680d48">00330</a> <span class="preprocessor">#define propEXIFData            'EXIF'</span>
+<a name="l00331"></a>00331 <span class="preprocessor"></span>
+<a name="l00332"></a>00332 <span class="comment">// current version of photoshop Major.Minor.Fix</span>
+<a name="l00337"></a><a class="code" href="group___property_keys.html#g7e85aca6327af94e26117d6f93c9eb59">00337</a> <span class="comment"></span><span class="preprocessor">#define propVersion             'vers'</span>
+<a name="l00338"></a>00338 <span class="preprocessor"></span>
+<a name="l00339"></a>00339 <span class="comment">// Is an action play in progress? actions palette or automation plug in(Simple)</span>
+<a name="l00343"></a><a class="code" href="group___property_keys.html#g6bc209a9be64c47a38f2cca0b47faab6">00343</a> <span class="comment"></span><span class="preprocessor">#define propPlayInProgress      'plip'</span>
+<a name="l00344"></a>00344 <span class="preprocessor"></span>
+<a name="l00345"></a>00345 <span class="comment">// Get the unicode name of the document</span>
+<a name="l00349"></a><a class="code" href="group___property_keys.html#g20a68f7102ea6558d1be4b825c402877">00349</a> <span class="comment"></span><span class="preprocessor">#define propUnicodeName         'unnm'</span>
+<a name="l00350"></a>00350 <span class="preprocessor"></span>
+<a name="l00351"></a>00351 <span class="comment">// Get the unicode name of the document</span>
+<a name="l00355"></a><a class="code" href="group___property_keys.html#gb44ef04ffd8b57d0ed6e5b68c56aebd8">00355</a> <span class="comment"></span><span class="preprocessor">#define propUniStr255Name       'u25n'</span>
+<a name="l00356"></a>00356 <span class="preprocessor"></span>
+<a name="l00360"></a><a class="code" href="group___property_keys.html#g181b9955b2f4388ace24bbf8034d056d">00360</a> <span class="preprocessor">#define propUnicodeNameWithoutExtension 'neun'</span>
+<a name="l00361"></a>00361 <span class="preprocessor"></span>
+<a name="l00372"></a><a class="code" href="group___property_keys.html#gbd82e4e53bf08720276da54c8e56ed85">00372</a> <span class="preprocessor">#define propDontShowAgainCount  'DSAC'</span>
+<a name="l00373"></a>00373 <span class="preprocessor"></span>
+<a name="l00377"></a><a class="code" href="group___property_keys.html#g0fdcf110c987430525b6955aac985931">00377</a> <span class="preprocessor">#define propNumberOfLayers      'nuly'</span>
+<a name="l00378"></a>00378 <span class="preprocessor"></span>
+<a name="l00382"></a><a class="code" href="group___property_keys.html#gf30f69de802eeca5c10113278561c4ac">00382</a> <span class="preprocessor">#define propTargetLayerIndex    'tgly'</span>
+<a name="l00383"></a>00383 <span class="preprocessor"></span>
+<a name="l00387"></a><a class="code" href="group___property_keys.html#g3ff8494c001753d82eb74a3b2ce4f793">00387</a> <span class="preprocessor">#define propLayerName           'lynm'</span>
+<a name="l00388"></a>00388 <span class="preprocessor"></span>
+<a name="l00392"></a><a class="code" href="group___property_keys.html#g5447ae1254dba8ba78fd680ea29d0211">00392</a> <span class="preprocessor">#define propUnicodeLayerName    'lynu'</span>
+<a name="l00393"></a>00393 <span class="preprocessor"></span>
+<a name="l00397"></a><a class="code" href="group___property_keys.html#g10508fb2cf588d44adf298e20ddd5bfe">00397</a> <span class="preprocessor">#define propPixelScaleFactor    'pxsf'</span>
+<a name="l00398"></a>00398 <span class="preprocessor"></span>
+<a name="l00403"></a><a class="code" href="group___property_keys.html#gd6f5dd23c677d2a2b239852b13844c1c">00403</a> <span class="preprocessor">#define propDoingPlace          'DPlc'</span>
+<a name="l00404"></a>00404 <span class="preprocessor"></span>
+<a name="l00409"></a><a class="code" href="group___property_keys.html#g4138de3844e43a2c2126e0df98a632ef">00409</a> <span class="preprocessor">#define propRasterizingSmartObject  'RsSO'</span>
+<a name="l00410"></a>00410 <span class="preprocessor"></span>
+<a name="l00414"></a><a class="code" href="group___property_keys.html#gc4b0902f2e9ac25f4553a0adbc79163c">00414</a> <span class="preprocessor">#define propAppIsModal          'aism'</span>
+<a name="l00415"></a>00415 <span class="preprocessor"></span>
+<a name="l00419"></a><a class="code" href="group___property_keys.html#ga8d648efa5499749b5ec7834eeeb4576">00419</a> <span class="preprocessor">#define propPixelLength             'MSpl'</span>
+<a name="l00420"></a>00420 <span class="preprocessor"></span>
+<a name="l00424"></a><a class="code" href="group___property_keys.html#g6a171c2f693c302c0182de6aebaa8dbd">00424</a> <span class="preprocessor">#define propLogicalLength               'MSll'</span>
+<a name="l00425"></a>00425 <span class="preprocessor"></span>
+<a name="l00429"></a><a class="code" href="group___property_keys.html#gcf2fe34857d1fa53e97458684aa8e38f">00429</a> <span class="preprocessor">#define propMUnits              'MSun'</span>
+<a name="l00430"></a>00430 <span class="preprocessor"></span>
+<a name="l00431"></a>00431 <span class="comment">/*</span>
+<a name="l00432"></a>00432 <span class="comment">* tile size in bytes (Simple, read-only)</span>
+<a name="l00433"></a>00433 <span class="comment">*/</span>
+<a name="l00434"></a><a class="code" href="group___property_keys.html#gdec1eeee3b73d34363657f90ad2d2989">00434</a> <span class="preprocessor">#define propTileSize        'TSiz'</span>
+<a name="l00435"></a>00435 <span class="preprocessor"></span>
+<a name="l00436"></a>00436 <span class="comment">/*</span>
+<a name="l00437"></a>00437 <span class="comment">* APE library has initialized correctly (Simple, read-only)</span>
+<a name="l00438"></a>00438 <span class="comment">*/</span>
+<a name="l00439"></a><a class="code" href="group___property_keys.html#g98bd944d661d57e9f6cc3ef9b2c8fc74">00439</a> <span class="preprocessor">#define propAPEIsInitialized    'mnky'</span>
+<a name="l00440"></a>00440 <span class="preprocessor"></span>
+<a name="l00441"></a>00441 <span class="comment">/* </span>
+<a name="l00442"></a>00442 <span class="comment">* Photoshop scratch disk volumes (Complex, read-only)</span>
+<a name="l00443"></a>00443 <span class="comment">* A list of 4-byte volume index that users have picked as preferred scratch volumes. </span>
+<a name="l00444"></a>00444 <span class="comment">* On windows, this index is 1 based, started from "A:\", so "C:" drive will be 3, "G:" will be 7, etc. </span>
+<a name="l00445"></a>00445 <span class="comment">*/</span>
+<a name="l00446"></a><a class="code" href="group___property_keys.html#gd38c722ee852cdbeaabb8e8cf5f2c1e6">00446</a> <span class="preprocessor">#define propScratchVolumeList   'svls'</span>
+<a name="l00447"></a>00447 <span class="preprocessor"></span>
+<a name="l00459"></a><a class="code" href="group___property_keys.html#g642b4b170ad422efc82ea3fbefbd65b0">00459</a> <span class="preprocessor">#define propGPUFlags                'GPUF'</span>
+<a name="l00460"></a><a class="code" href="group___property_keys.html#gb502742c10473e6a40686baaee348216">00460</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsModeMask           0x0003</span>
+<a name="l00461"></a><a class="code" href="group___property_keys.html#g643e2f04d0609b8f1af143845e44300d">00461</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsModeShift          0</span>
+<a name="l00462"></a><a class="code" href="group___property_keys.html#geb2881289396a63f63621db2e8bf2b34">00462</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsBasic              0</span>
+<a name="l00463"></a><a class="code" href="group___property_keys.html#g40027e73a12165ff16d32af5d000568c">00463</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsNormal             1</span>
+<a name="l00464"></a><a class="code" href="group___property_keys.html#g110b5397d5552168d0410518c9ee33b6">00464</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsAdvanced           2</span>
+<a name="l00465"></a><a class="code" href="group___property_keys.html#g8f9ec5f71addff4f61cc8ee5870e28e0">00465</a> <span class="preprocessor"></span><span class="preprocessor">#define GPUFlagsGetMode(FLAGS)      (((FLAGS) &amp; kGPUFlagsModeMask) &gt;&gt; kGPUFlagsModeShift)</span>
+<a name="l00466"></a><a class="code" href="group___property_keys.html#g40dc914ea137d4e72d5d76f1c5378f4b">00466</a> <span class="preprocessor"></span><span class="preprocessor">#define GPUFlagsSetMode(MODE)       (((MODE) &lt;&lt; kGPUFlagsModeShift) &amp; kGPUFlagsModeMask)</span>
+<a name="l00467"></a><a class="code" href="group___property_keys.html#g1178d009bf59543be833c4cf35ac7234">00467</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsCLCompute          0x0020</span>
+<a name="l00468"></a><a class="code" href="group___property_keys.html#g46bc83aae78f5854533c417ea219d496">00468</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsGLCompute          0x0040</span>
+<a name="l00469"></a><a class="code" href="group___property_keys.html#g22ca533a131386c66df22ded20e1c11b">00469</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsGPUEnabled         0x0080  // OpenGL checkbox is checked</span>
+<a name="l00470"></a><a class="code" href="group___property_keys.html#g7e3af32b2fb76ae60070b654deb13f60">00470</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsGPUPossible        0x0100  // OpenGL checkbox is not dimmed</span>
+<a name="l00471"></a><a class="code" href="group___property_keys.html#g2bf774cdfaf6b32278f53576b889e24a">00471</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsBasicPossible      0x0200  // Basic mode *could* be selected by the user</span>
+<a name="l00472"></a><a class="code" href="group___property_keys.html#g1ff5f4786a9061286130437ae66a6737">00472</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsNormalPossible     0x0400  // Normal mode *could* be selected by the user</span>
+<a name="l00473"></a><a class="code" href="group___property_keys.html#g53fa7d65e4c3355287d3e6bf42381fd4">00473</a> <span class="preprocessor"></span><span class="preprocessor">#define kGPUFlagsAdvancedPossible   0x0800  // Advanced mode *could* be selected by the user</span>
+<a name="l00474"></a>00474 <span class="preprocessor"></span>
+<a name="l00475"></a><a class="code" href="group___property_keys.html#gb7f1ea74cffc58da662b85a1417d04d7">00475</a> <span class="preprocessor">#define propVRAM_MB                 'VRAM'  // This returns the available VRAM in units of 1024*1024.</span>
+<a name="l00476"></a>00476 <span class="preprocessor"></span>
+<a name="l00480"></a><a class="code" href="group___property_keys.html#g96544cee3cadfb1f0cdd8037dc024eea">00480</a> <span class="preprocessor">#define propLayerIsSmart            'liss'</span>
+<a name="l00481"></a>00481 <span class="preprocessor"></span>
+<a name="l00482"></a>00482 
+<a name="l00484"></a>00484 <span class="comment">//-------------------------------------------------------------------------------</span>
+<a name="l00485"></a>00485 
+<a name="l00486"></a>00486 <span class="preprocessor">#endif // __PIProperties_h__</span>
+</pre></div>
+<!-- Begin Footer -->
+</td>
+<td width="20">&nbsp;&nbsp;</td>
+</table>
+
+<div id="footerrow"><!--give footer 25px of white above--></div>
+<div id="footer" title="footer: links to copyright and other legal information">
+<p><a href="licenses.html" class="el">&copy; 2012 Adobe Systems Incorporated</a></p>
+<a title="Terms of Use" href="http://www.adobe.com/misc/copyright.html">Terms of Use - </a>
+<a title="Privacy Policy" href="http://www.adobe.com/misc/privacy.html">Privacy Policy - </a>
+<a href="http://access.adobe.com">Accessibility - </a>
+<a title="Avoid software piracy" href="http://www.adobe.com/aboutadobe/antipiracy/main.html">Avoid software piracy - </a>
+<a title="Permissions and trademarks" href="http://www.adobe.com/misc/agreement.html">Permissions and trademarks - </a>
+<a title="Product License Agreements" href="http://www.adobe.com/products/eulas/main.html">Product License Agreements</a></div>
+<p/>
+</body>
+</html>

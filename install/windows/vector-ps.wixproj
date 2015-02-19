@@ -1,0 +1,143 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<SolutionDir Condition="'$(SolutionDir)' == ''">$(MSBuildProjectDirectory)\..\..\env-windows\msvc2010</SolutionDir>
+		<BuildDir Condition="'$(BuildDir)' == ''">$(MSBuildProjectDirectory)\..\..\build</BuildDir>
+		<Configuration Condition=" '$(Configuration)' == '' ">ReleaseSvg</Configuration>
+		<Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+		<IncludeJre Condition=" '$(IncludeJre)' == '' ">false</IncludeJre>
+		<PlatformBit Condition=" '$(Platform)' == 'x86' ">32</PlatformBit>
+		<PlatformBit Condition=" '$(Platform)' == 'x64' ">64</PlatformBit>
+		<DefineSolutionProperties>false</DefineSolutionProperties>
+		<SchemaVersion>2.0</SchemaVersion>
+		<OutputType>Package</OutputType>
+		<OutputPath>$(MSBuildProjectDirectory)\..\..\build\distributive</OutputPath>
+		<IntermediateOutputPath>$(MSBuildProjectDirectory)\..\..\build\distributive\$(PlatformBit)\$(Configuration)</IntermediateOutputPath>
+		<IntermediateOutputPath Condition=" '$(IncludeJre)' == 'true' ">$(IntermediateOutputPath).Jre</IntermediateOutputPath>
+		<WixInstallPath Condition="'$(WixInstallPath)' == ''">D:\Soft\wix37-binaries</WixInstallPath>
+		<WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(WixInstallPath)\Wix.targets</WixTargetsPath>
+		<WixTasksPath Condition=" '$(WixTasksPath)' == '' ">$(WixInstallPath)\WixTasks.dll</WixTasksPath>
+		<WixToolPath Condition=" '$(WixToolPath)' == '' ">$(WixInstallPath)</WixToolPath>
+		<WixExtension>$(WixInstallPath)\WixUIExtension.dll;$(WixInstallPath)\WixUtilExtension.dll</WixExtension>
+		<SuppressIces>ICE60</SuppressIces>
+		<Jdk32 Condition="'$(Jdk32)' == ''">d:\library\jdk_x86</Jdk32>
+		<Jdk64 Condition="'$(Jdk64)' == ''">d:\library\jdk</Jdk64>
+		<VectorCore>$(MSBuildProjectDirectory)\..\..\build\vector-core</VectorCore>
+	</PropertyGroup>
+
+	<Import Project="$(SolutionDir)\version.props" />
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseSvg|x86|true' ">
+		<DefineConstants>ProductFormat=SVG;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-svg_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseSvg|x86|false' ">
+		<DefineConstants>ProductFormat=SVG;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-svg_$(Version).nojre_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseSvg|x64|true' ">
+		<DefineConstants>ProductFormat=SVG;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-svg_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseSvg|x64|false' ">
+		<DefineConstants>ProductFormat=SVG;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-svg_$(Version).nojre_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseWmf|x86|true' ">
+		<DefineConstants>ProductFormat=WMF;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-wmf_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseWmf|x86|false' ">
+		<DefineConstants>ProductFormat=WMF;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-wmf_$(Version).nojre_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseWmf|x64|true' ">
+		<DefineConstants>ProductFormat=WMF;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-wmf_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseWmf|x64|false' ">
+		<DefineConstants>ProductFormat=WMF;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-wmf_$(Version).nojre_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseEmf|x86|true' ">
+		<DefineConstants>ProductFormat=EMF;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-emf_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseEmf|x64|true' ">
+		<DefineConstants>ProductFormat=EMF;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-emf_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseWpg|x86|true' ">
+		<DefineConstants>ProductFormat=WPG;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-wpg_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseWpg|x64|true' ">
+		<DefineConstants>ProductFormat=WPG;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-wpg_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseCdr|x86|true' ">
+		<DefineConstants>ProductFormat=CDR;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-cdr_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)|$(IncludeJre)' == 'ReleaseCdr|x64|true' ">
+		<DefineConstants>ProductFormat=CDR;ProductVersion=$(Version);BuildDir=$(BuildDir);Jdk32=$(Jdk32);Jre32=$(Jdk32)\jre;Jdk64=$(Jdk64);Jre64=$(Jdk64)\jre;VectorCore=$(VectorCore);VectorCoreLib=$(VectorCore)\lib;IncludeJre=$(IncludeJre)</DefineConstants>
+		<OutputName>install-cdr_$(Version)_$(Platform)</OutputName>
+	</PropertyGroup>
+
+	<ItemGroup Condition=" '$(IncludeJre)' == 'true' ">
+		<HarvestDirectory Include="$(Jdk32)\jre">
+			<DirectoryRefId>D.32.jre</DirectoryRefId>
+			<ComponentGroupName>F.Jre32</ComponentGroupName>
+			<SuppressCom>true</SuppressCom>
+			<SuppressRegistry>true</SuppressRegistry>
+			<SuppressRootDirectory>true</SuppressRootDirectory>
+			<PreprocessorVariable>var.Jre32</PreprocessorVariable>
+			<Transforms Condition=" '$(Platform)' == 'x64' ">Win64no.xsl</Transforms>
+		</HarvestDirectory>
+
+		<HarvestDirectory Include="$(Jdk64)\jre">
+			<DirectoryRefId>D.64.jre</DirectoryRefId>
+			<ComponentGroupName>F.Jre64</ComponentGroupName>
+			<SuppressCom>true</SuppressCom>
+			<SuppressRegistry>true</SuppressRegistry>
+			<SuppressRootDirectory>true</SuppressRootDirectory>
+			<PreprocessorVariable>var.Jre64</PreprocessorVariable>
+			<Transforms Condition=" '$(Platform)' == 'x64' ">Win64no.xsl</Transforms>
+		</HarvestDirectory>
+	</ItemGroup>
+
+	<ItemGroup>
+		<HarvestDirectory Include="$(VectorCore)\lib">
+			<DirectoryRefId>D.VectorCoreLib</DirectoryRefId>
+			<ComponentGroupName>F.VectorCoreLib</ComponentGroupName>
+			<SuppressCom>true</SuppressCom>
+			<SuppressRegistry>true</SuppressRegistry>
+			<SuppressRootDirectory>true</SuppressRootDirectory>
+			<PreprocessorVariable>var.VectorCoreLib</PreprocessorVariable>
+			<Transforms Condition=" '$(Platform)' == 'x64' ">Win64no.xsl</Transforms>
+		</HarvestDirectory>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="$(MSBuildProjectDirectory)\vector-ps.wxs" />
+	</ItemGroup>
+
+	<Import Project="$(WixTargetsPath)" />
+
+	<Target Name="Build"
+			  DependsOnTargets="$(BuildDependsOn)"
+			  Outputs="$(TargetPath)">
+	</Target>
+</Project>

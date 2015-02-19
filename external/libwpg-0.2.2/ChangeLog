@@ -1,0 +1,1785 @@
+2013-04-18  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [b70286800b809c2756e3f5b7e1d07bfef36a77a7]
+
+	Fix distcheck and LO build
+
+
+2013-04-18  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [78d42a7c4f45db8c14d5de78d2ca997746952643]
+
+	Small fixup
+
+
+2013-04-18  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [0779ca85cce5d1eebcb23935a4312496e4b41bc1]
+
+	By agreement of all contributors, dual-licensing under MPL2+ and LGPL2.1+
+
+
+2013-01-18  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [6fad6ebba6fa1b3765cb0f97b4df334c4e7ac0f4]
+
+	Fix build with newer autotools
+
+
+2012-12-16  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [307e5a89cce596a8f23b35df50e51b11fc0782bd]
+
+	Change some changes to project files
+
+
+2012-12-16  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [1250f63bbffdef7fc14efc8fd2ac27405b45dc31]
+
+	These ones don't need to be executable
+
+
+2012-12-16  David Tardon  <dtardon@redhat.com>  [33a2a90d334a747d5fbd19d18a1ec06e1075afb6]
+
+	coverity: drop useless check for NULL before using delete
+
+	Signed-off-by: Fridrich Štrba <fridrich.strba@bluewin.ch>
+
+2012-12-16  David Tardon  <dtardon@redhat.com>  [bec3473b25deff39f6d910c48673984170d7d275]
+
+	coverity: depth is always 1, 2, 4 or 8 here
+
+	Signed-off-by: Fridrich Štrba <fridrich.strba@bluewin.ch>
+
+2012-10-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [bf50696797e68e844bef73611e37bb81e2ad0616]
+
+	Small changes to the visual studio projects
+
+
+2012-10-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [043e338985ec92bca52aa0f6eef3b32f050b07b5]
+
+	Some more configurability about warnings
+
+
+2012-09-14  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [f564be29f4824ad1899441b132644bbd56a9c50b]
+
+	Specify LIBWPD_LIBDIR and LIBWPD_INCLUDES as env. variables
+
+
+2012-09-14  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [2f6f7890947f36c144df9c99338dc5a45dfb5c39]
+
+	Bump version
+
+
+2012-09-14  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [7fb0e7c6e933592c6d4d0eb4bf0e340e50b090da]
+
+	Dist the VS2010 files
+
+
+2012-09-14  Voreppe LibreOffice Builder  <voreppe@nomail.com>  [5f7801e3b1e842f9ffcbeee81134f2f67a7f81ed]
+
+	Adding VS2010 project files
+
+
+2012-09-14  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [64be18a905561ba9a9cea015f2f651fa13e61e60]
+
+	Dist the VS2008 files
+
+
+2012-09-14  Voreppe LibreOffice Builder  <voreppe@nomail.com>  [43fc4f40e482d5101d23b9a91d839e4e1f19407d]
+
+	Add VS2008 project files
+
+
+2012-09-11  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [1fabf39da889c930883343796cc76ef4badcc497]
+
+	Little modification of the VS6 build
+
+
+2012-09-10  Stephan Bergmann  <sbergman@redhat.com>  [1918d136cd063bda4b39453917ac0e3940fbbe98]
+
+	-Werror,-Wunused-private-field
+
+	Originally fixed for LibreOffice as <http://cgit.freedesktop.org/libreoffice/
+	core/commit/?id=d4419806c8f4633f99ec54f564930f1932cf4549 "libwpg:
+	-Werror,-Wparentheses -Werror,-Wunused-private-field" (and the -Wparentheses
+	part is already covered by 5cf190eb365df00a1446738b3ab0d3e55291def3 "Fix clang
+	build").
+
+2012-08-31  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [b99c7b7a39f7bbf64718693afb271b2321254c58]
+
+	Avoid warnings of autotools
+
+
+2012-07-23  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [71de4ed1fc61714ea454d4db08dac6a1fbbb2e50]
+
+	Appease automake 1.12
+
+
+2012-07-01  David Tardon  <dtardon@redhat.com>  [00292458bc10c680265444a6651bc280f71307ec]
+
+	coverity: avoid implicit sign extension in cast
+
+
+2012-07-01  David Tardon  <dtardon@redhat.com>  [214670b6476fde7ae33350d5ee544af0a37e1eef]
+
+	coverity: protect against self-assignment
+
+
+2012-07-01  David Tardon  <dtardon@redhat.com>  [96c80c8d560aa5be193de44352ff9bcdc5d6b30a]
+
+	coverity: the condition is always false
+
+
+2012-04-24  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [df4eaec7c54fc2a465acfb9ed3cb23f2fe108799]
+
+	Fix clang build
+
+
+2012-01-27  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [b286cf9ba51ccf40a68abfca9ad468ed346ef2bb]
+
+	Fix the buildnumber.sh script
+
+
+2012-01-17  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [a88ddb88f32a180fc478197e8d33657801b9de61]
+
+	Backport changes from libvisio
+
+	Conflicts:
+
+		src/lib/WPGPaintInterface.h
+		src/lib/WPGXParser.cpp
+
+2011-11-24  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [fe3785782a3254ae21af8c3d698edaf34ab1cb35]
+
+	Update doxygen.cfg file
+
+
+2011-10-28  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [d2f559425db955efe49b4e06653a5d4cc0deb73c]
+
+	Add modelines to enforce the coding style
+
+
+2011-10-25  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [52be98406b8240e96d5e46de0f94662a078f86f7]
+
+	Reformat for the sake of consistency
+
+
+2011-10-17  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [edc4f9d4394011d6ce685c3dae36a3bde595d405]
+
+	Add -Weffc++ flag to help us to write less crappy code
+
+
+2011-10-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [87b3c7c14844fde9b4574808eb30d9ffde609161]
+
+	Consistent use of right variables
+
+
+2011-10-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [3430c98bdc9b1054d368f0b882aec1d7c0e78612]
+
+	Don't use private api extensions if not needed
+
+
+2011-10-05  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [bc6925d0642d72392464c7dd72d9dd339ed98b1f]
+
+	Fix build inside a new LibreOffice
+
+
+2011-10-04  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [43db3ef26c7d7003f1ce32d87a4e132b20f3f97e]
+
+	This does not need to be going from int to double
+
+
+2011-10-04  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [8544c21d90f91e3f0a4af06ef3ccba3d53b2a0e4]
+
+	stroke width 0 should be interpreted as hairline
+
+
+2011-10-04  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [ea575c0a0defb3cd5446f5c7deec9b80e75c7a7f]
+
+	Don't cater for cases that don't happen in WPGSVGGenerator
+
+
+2011-10-04  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [0b1e3c623103c736cf4cd12a0d03e937ac10a9bc]
+
+	A typo in parsing WPG1 pen style
+
+
+2011-09-30  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [58f643143e30a00ed8c615ee90d930d501eebf5b]
+
+	Fill up the dots2 from dots1 when only one dot type is used
+
+
+2011-09-30  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [c760ed4c2fb760d49aa5b06d95ea3a93b99b184e]
+
+	Fix WPG default dash arrays
+
+
+2011-09-30  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [a48d5d0e8c992c7c647eb832f04c14350e111b07]
+
+	White-space change
+
+
+2011-09-30  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [d243f39c4ec099e916041b3df6dc9b4d0d370203]
+
+	Adapting the WPGSVGGenerator to a more advanced generator in libvisio
+
+
+2011-09-30  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [f18ead40c81d38912feadb19aab4748765f1f023]
+
+	Rewriting the dash array passing in the API
+
+
+2011-09-30  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [f82d65940970cc5c48a359917549fa2d8d8d8646]
+
+	git-ignore some more files
+
+
+2011-09-26  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [bc25dbb42858689d9259667abc8138e74199eaa0]
+
+	It looks like svg:cx and svg:cy for gradient center are better choice
+
+
+2011-09-12  Jan Holesovsky  <kendy@suse.cz>  [1034bf8e47a1cdc125d223a0c4fd64b32023120c]
+
+	Fix windows gcc build of libwpg inside LibreOffice tree
+
+
+2011-09-10  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [a97825d26f7396d9f07757c655a86dd53efbea4e]
+
+	Fix autotools Windows build
+
+
+2011-09-10  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [da57aac344249662048020e716fd133b100c9c4a]
+
+	Fix a typo in configure.ac
+
+
+2011-08-31  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [b9f99f462a177af47e81e22bf632a36d3b29d796]
+
+	Give credits to scarabeus the way we do in libwpg
+
+
+2011-08-31  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [e727dafa1443a307a7434c83aa5e6a708ea737d2]
+
+	Libwpg does not put copyright or license headers into build files
+
+
+2011-08-31  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [cb593dcf175fb900d0f7739ed124ac21e9a97d91]
+
+	Bump version
+
+
+2011-08-31  Tomas Chvatal  <tchvatal@suse.cz>  [e1cd4aa3f274053342f17f4406168ca1d897e323]
+
+	Update configure.ac on latest syntax from libvisio.
+
+	Signed-off-by: Tomas Chvatal <tchvatal@suse.cz>
+	Signed-off-by: Fridrich Štrba <fridrich.strba@bluewin.ch>
+
+2011-08-12  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [fc61e0f59a02269101e60cd2b17f393d1306ad8f]
+
+	fix description
+
+
+2011-08-12  Tomas Chvatal  <tchvatal@suse.cz>  [f1e9c3bc78f97e0df7b007ca23bc476852c1a316]
+
+	Add gitignores.
+
+	Signed-off-by: Tomas Chvatal <tchvatal@suse.cz>
+
+2011-08-12  Tomas Chvatal  <tchvatal@suse.cz>  [f7efffb7825d6cc85e516b26e647b03049bddc25]
+
+	Update configure.ac to new syntax
+
+	Signed-off-by: Tomas Chvatal <tchvatal@suse.cz>
+
+2011-08-12  Tomas Chvatal  <tchvatal@suse.cz>  [d5d6de3c198b2eeaefbba248f460b15a25348cb4]
+
+	Rename configure.in to configure.ac
+
+	Signed-off-by: Tomas Chvatal <tchvatal@suse.cz>
+
+2011-08-12  Tomas Chvatal  <tchvatal@suse.cz>  [a7315234b9b47a574c209a757d0d74667f81bf83]
+
+	Cleanup the makefile.am
+
+	Signed-off-by: Tomas Chvatal <tchvatal@suse.cz>
+
+2011-08-12  Tomas Chvatal  <tchvatal@suse.cz>  [18def94f73d0487dc32580c7b759cd868f6abe17]
+
+	Punt cvsignore
+
+
+2011-06-10  Tor Lillqvist  <tml@iki.fi>  [438269a5b4d77707ba252ad53a9e485ebcc84a80]
+
+	Android compilation fix
+
+
+2011-06-03  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [e91fc859c3c71e3aea09d60cb52e1320fd0825b0]
+
+	Fix windows MSVC6 build
+
+
+2011-06-03  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [1b4abd4266b5dd4d67e0d0f2b5ce86c8b46f85f7]
+
+	Remove unused file
+
+
+2010-12-05  Lubomir Rintel  <lkundrak@v3.sk>  [5e0cf43acc7cc90612ac0b23d917e5bd38144e56]
+
+	Avoid multilib conflict in Doxygen documentation with timestamp.
+
+
+2010-11-24  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [5ffd3b3e2edac195409a8f1c518f0e11a7f5320d]
+
+	Fix pkg-config dependencies
+
+
+2010-11-16  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [cf72266a42774ab3205b74c96e1c722a9f5cb9c6]
+
+	Fix news for 0.2.0 release
+
+
+2010-11-10  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [77a5891f07b758ccd5682b87f8004afd2ebc86ca]
+
+	Generate ChangeLog at make dist time and rename the existing one to NEWS
+
+
+2010-11-09  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [ac3c06f0833affa6046f563bcb24cd30c4bd8f84]
+
+	Fix some executable permissions
+
+
+2010-11-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [f038973f224ec04683efb573bc802ffb599d05ad]
+
+	Don't export the WPGDashArray.h header
+
+
+2010-11-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [2c4da6d044ca81cc12624dfbeaa2685166de44d0]
+
+	Don't export fixedPointToDouble symbol
+
+
+2010-11-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [8843c18cc08959fd87360d2fce76d0311ce16957]
+
+	Fix some warnings
+
+
+2010-11-06  Fridrich Štrba  <fridrich.strba@bluewin.ch>  [e86a7de829e514582647d21c7cbb139984655a2c]
+
+	Fix the OOo/LO makefile.mk
+
+
+2010-11-01  William Lachance  <wrlach@gmail.com>  [163ed29401eeb28f5482af37b62b71a96113b6b0]
+
+	Update for new insertSpace function in libwpd
+
+
+2010-08-23  William Lachance  <wrlach@gmail.com>  [0ce836b160c916ef7a680b1e81d6e9f150f219d7]
+
+	Adapt to API changes in libwpd
+
+
+2010-07-27  William Lachance  <wrlach@gmail.com>  [221103e24e633ae4e7bf202b89ff1e2ad5f6aab4]
+
+	Adapt to changes in libwpd document interface
+
+	insertField is now the more specific insertPageNumber. This might change, but that's
+	what we're doing for now.
+
+2010-06-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a6953088a8d31742f9934114265b77a1d8fb8541]
+
+	Adapt to libwpd changes
+
+
+2010-06-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c093f436084c1894b52191c4e2b87650237f072f]
+
+	escape text when writing to svg
+
+
+2010-06-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [191487ce25939525d21d0a5bd5231c2f6d426979]
+
+	Don't parse here the sub-document, since nowadays the parser works
+
+
+2010-06-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [98b2ccd1319c5a4aa8b4c38865135e4f5ac22262]
+
+	Don't bother with text Path and text Block that we don't support yet
+
+
+2010-06-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1cc5958133b9e20f781cf2edde5fb6bf6383b3ed]
+
+	writing out text attributes into SVG
+
+
+2010-06-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ec87ee7bd0bfeb564776e7997077a4878d5e9715]
+
+	Some more steps towards parsing of embedded text
+
+
+2010-06-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a11fdcc6149bd5a3cbcb908f55300c802bb02a7e]
+
+	Some more parsing of text data
+
+
+2010-06-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [f9b273165e610fc98317015d64a2e04578ee174f]
+
+	Starting to parse text embedded inside graphics as a fragment of WP document for wPG1 and WPG2
+
+
+2010-06-08  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a8af89f8907c0ea049b47c5c7f84fcc751bc5ef0]
+
+	Starting to support some text elements embedded in WPG documents
+
+
+2010-06-08  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c37f39d3fd62b80ed3f235f0a1db9448205aaf00]
+
+	better this
+
+
+2010-06-08  Fridrich Strba  <fridrich.strba@bluewin.ch>  [cb52b887f55747f7ddc13f94b561db350be01fe0]
+
+	Fix a regression that was introduced by code trying to load invalid documents :)
+
+
+2010-06-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [7238f47c64de69528b476dbf7db3527cfa5c1376]
+
+	converting partial ellipse to elliptical arc
+
+
+2010-06-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ea1f2f0f6b95b2c646887e8cd9052a6af83096a6]
+
+	Trying to handle some invalid documents that libwpd's dumping mechanism created due to a bug
+
+
+2010-06-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [58b7037787e2c1c7be26e918a3bf20fc4de2c3e7]
+
+	fixing distcheck errors
+
+
+2010-06-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [9160aab71f4f3f4e882cacbeac1b4dd6abccf91f]
+
+	Fixing a logical error
+
+
+2010-06-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c58a3455d161709e35740bc6a3fb2ef0a582cbe5]
+
+	trying to tweak a bit the styles
+
+
+2010-06-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [45b762bf59e637f638db58a0d9aabcb71b0ed3f7]
+
+	*** empty log message ***
+
+
+2010-06-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c7e5402f518d5f4ce2990ac2794232fbf3f136b5]
+
+	Implement --with-dummy-bitmaps for purposes of svg validation runs
+
+
+2010-06-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2ef4b2df7d3e071ab8ae1bb07c7de8a3bc8d89d7]
+
+	Fixing rotation angles
+
+
+2010-06-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [09c81f164dec4fcda4f8bade88f01834d4c7a844]
+
+	Empty gradient array means that object is not filled
+
+
+2010-06-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [002d8537ee4366462e1c0bebb5515da24f796033]
+
+	Fix some issues with styles output
+
+
+2010-06-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e0971bf03948185953a0eef7b87db55a53956191]
+
+	Fix a badly formed xml in svg output
+
+
+2010-06-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c3588169caffb06ec584339c7a2f8dd586bde870]
+
+	Miscellaneous little things
+
+
+2009-09-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [3ff7df0da72c09d065df18689bfca8fb65392ca4]
+
+	missing include
+
+
+2009-09-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [fa86da815216006f378400dcceaf7eaec8a774df]
+
+	Fight FUD and misunderstanding
+
+
+2009-09-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1aa79df4e44ee1d619d948c147e3de4fe9654788]
+
+	Since now the resolution matters we are trying to get it right (hopefully)
+
+
+2009-09-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [6d6a3801cbeb1c983f885da5ce4ce2b790ced135]
+
+	Actually use different numbers for binary dumps if there are several bitmaps in the file
+
+
+2009-09-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [cf556fa38c1d94602b9c024227d6d5ab307707b6]
+
+	Adding the image resolutions to the generated DIB + starting to rework the dash-array to remove the public accessibility of the class
+
+
+2009-09-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [54aedf59be35da7176f2909d1336dd2d18e99697]
+
+	Trying to finish the 0.2.0 series release
+
+
+2008-12-30  Fridrich Strba  <fridrich.strba@bluewin.ch>  [868f81aa1b8ed7e38d29fffc58ba729461c6eca3]
+
+	adapting to the non-use of size_t in libwpd
+
+
+2008-12-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [388517f6fb58bcff6786b8e0b4dbe11934d90293]
+
+	move gradient angle from WPGGradient class to the general style (we will get rid of WPGGradient soon)
+
+
+2008-12-05  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8ff816916a461856639bf0c1f2dcc8d38f2d9727]
+
+	removing unused files
+
+
+2008-12-05  Fridrich Strba  <fridrich.strba@bluewin.ch>  [fcb984ffc54cd4a1a8213184c1f12d1cba547348]
+
+	committing work done in the train while having wireless access
+
+
+2008-12-05  Fridrich Strba  <fridrich.strba@bluewin.ch>  [78eba5fd6b4bd443db27032328fc12982fd61245]
+
+	moving the brush style information out from the WPGBrush class (making the class meager so that it can be removed at one point)
+
+
+2008-12-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8f8538acd240d811371182c62a042600f040702e]
+
+	remove public access from class WPGColor
+
+
+2008-12-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [3cdcff3d29fac834b35d675c065b743a3e0457f9]
+
+	don't fill straight line + don't fill opened objects
+
+
+2008-12-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [358f232b3e82476de9e5507cadde739ec743cca2]
+
+	removing the testdocs from here
+
+
+2008-12-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [af4c1fbbf3234844759805219729cf317a18dc81]
+
+	taking WPGDashArray from WPGPen.{cpp,h} into a separate file
+
+
+2008-12-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [90dfe386e2a1fa16a1c8189cda099f93b722169d]
+
+	transforming rgb(XX,YY,ZZ) to #XXYYZZ (still need to handle the default brush correctly)
+
+
+2008-12-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [fc307a27f27bc3197ad7e7c1754e917379f2f4f1]
+
+	all float -> double (it does not take so much more space and saves big deal of precision)
+
+
+2008-12-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [885600408b12220256b8aeb87219114eed837370]
+
+	adapting to the fact that getFloat -> getDouble in WPXProperty class
+
+
+2008-12-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ef7ba477fae55b006b774149aa0dcc7de120e52c]
+
+	small changes that prevent some crashes and produce a more efficient svg
+
+
+2008-11-28  Fridrich Strba  <fridrich.strba@bluewin.ch>  [53743c06548fd12b64ed7da65bca7f278616bb90]
+
+	joining all the style related callback into one since we are calling them together
+
+
+2008-11-28  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a136f42acdde69b3e486bd98c37b09c36f6fce47]
+
+	removing public visibility of WPGBitmap class since Qt4 is able to load a bitmap from a bmp
+
+
+2008-11-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [36ff0ff253a2511b86613aeb8f30e9ff22ef2da6]
+
+	some more api change (and more to come)
+
+
+2008-11-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8842d253e406c9bb251430086b5ac6970759ccfc]
+
+	WPGRect gone + simplify WPGBitmap so that it doesn't duplicat functionalities in other classes
+
+
+2008-11-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [f15fe9bed7378ac5325fe9518e89a18926eb21ba]
+
+	removing another libwpg type: WPGPoint
+
+
+2008-11-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [00a90a8838361021eb4baff1d8f42beaa28dc6bb]
+
+	getting rid of another data structure in favour of libwpd framework WPXProperty* classes
+
+
+2008-11-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [32cd365f7164978ec3ea0d9406c2f2301358c4b0]
+
+	first step in the struggle to simplify libwpg api
+
+
+2008-08-21  Fridrich Strba  <fridrich.strba@bluewin.ch>  [0e4982e92eb49f686690bada98db5ffefe63fddb]
+
+	avoiding a signedness/unsignedness issue
+
+
+2008-08-15  Fridrich Strba  <fridrich.strba@bluewin.ch>  [dd92590f1a7339c19626fd3050963ac9f4ca05e1]
+
+	Fix of some WPGBitmap::append methods
+
+
+2008-08-13  Fridrich Strba  <fridrich.strba@bluewin.ch>  [095bdec1d79b80cc7389917afd730131b67ff4dc]
+
+	some more sanity checks due to sum1's tearing-down work. Thanks, dudie
+
+
+2008-07-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [849b71683e01d1ad245306a768588a36c93adf45]
+
+	some anonymous namespaces here and there + some more verbose --help and --version output
+
+
+2008-07-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [dcf26fd0b22ddce55d524c78fcba5a03361405ee]
+
+	merging from stable branch
+
+
+2008-07-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [860caab97886de94dab9e80bec2f4a9c3ce7ab24]
+
+	some more robustness checks
+
+
+2008-07-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e19bc3b03e401450b976c87cfb601cf016226ab8]
+
+	adding some more robustness to the parser
+
+
+2008-07-23  Fridrich Strba  <fridrich.strba@bluewin.ch>  [95688402362433ce20ea6d5996d1653f1bbb2353]
+
+	some optimizations + change in handling corrupted bitmap
+
+
+2008-07-23  Fridrich Strba  <fridrich.strba@bluewin.ch>  [fddc961cc8375a13b6fd0c8d127e0e3072faaf75]
+
+	handle in the new std::vector-based RL decoding a broken bitmap the same way as the preallocated-buffer method was
+
+
+2008-07-23  Fridrich Strba  <fridrich.strba@bluewin.ch>  [93420ca98179c599e1d906519445ac6e1626d0bd]
+
+	rewrite the RLE decoding to not use manually allocated memory
+
+
+2008-07-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8b627926e134ed5724736d86ea2fd8f87ac0fbe4]
+
+	another defensive condition, just to make sum1's waiting for Godot longer
+
+
+2008-07-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [6c820dc948ff3f03e86c7c3cb80775f337bd1a0b]
+
+	prevent some invalid reads
+
+
+2008-07-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [03c42d142228e13f74c702de759033cfaabe0c22]
+
+	remove the crash as not to inflict sum1 unnecessary sufferings and supoerfluous injuries
+
+
+2008-07-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2bb2e6521d5a9441164211f7a59558401e41e992]
+
+	build in a crash so that we get a document that contains polyspline
+
+
+2008-07-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1f2d85a24c625e013e3bf5a40ca87c511c7bff05]
+
+	we never saw a polyspline, we don't manage to generate it. So, we simply draw a polyline instead and wait for bug reports to give us some more information
+
+
+2008-07-18  Fridrich Strba  <fridrich.strba@bluewin.ch>  [d3746777946367a0ed9a2cb57d848b3333cbd3cf]
+
+	when dumping bitmaps and binary objects, don't crash when the filesystem of the current directory is read-only for the given user
+
+
+2008-07-17  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1cb24a36e4c23ea2982474637b12adc6851398fc]
+
+	handle bitmaps with colour depth 2 and 4 in wpg1
+
+
+2008-07-17  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8ead99c08d6502a174ff746a2bc08e9595232236]
+
+	attempt to handle embedded postscript in WPG1 files (if I could at least have some documents to test with)
+
+
+2008-07-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [0485b8e4ad57dc5fc6fcf17c8cb3f51f845c72b3]
+
+	small variation of condition
+
+
+2008-07-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ea6c3878fc61bffbdadced6c0cc10bbdcdd0ae3a]
+
+	rotate ellipses + make the generated svg look cute
+
+
+2008-07-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a73186e1cbd827a9c2512fb33a9c8592c339f22d]
+
+	fix path coordinates + fill attributes
+
+
+2008-07-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [3f2c66e5bb6f96ea61381189aaee12eeba30185a]
+
+	miscellanous fixes form stable branch
+
+
+2008-07-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [fbeb14385aa28e1461ace2ff972ace950a3bf32c]
+
+	some cosmetic changes + change of default constructor of WPGBrush + distinguish between polyline and polygon and add a callback for the polyline
+
+
+2008-07-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [55c8d42286f370609045a0263cefa73e48a3afef]
+
+	fix rect positioning in wpg1
+
+
+2008-07-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1577c0524d9038ceebca4b4d588eaa4aaee1b3a3]
+
+	add callbacks for embedded graphics
+
+
+2008-07-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [277ca8b9acb9f02eaf8a5fda6c538794801bff40]
+
+	don't assume 1200 dpi if the document specifies different one
+
+
+2008-07-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [aa15fb42f8a1ada4713e0d721c481db8f386123d]
+
+	Add some useful dump and debug capabilities and fix a wrong seek
+
+
+2008-04-12  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ce77b58a61efc262e68f9821ec6797581cec5b4b]
+
+	fix some warnings
+
+
+2008-04-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [4defa7fdaeaff98a9f84ab76bed5a8aed2536281]
+
+	some more unsigned vs. signed stuff in code that is almost never used :-)
+
+
+2008-04-08  Fridrich Strba  <fridrich.strba@bluewin.ch>  [7ba8197eeaf3307d401ba7028870711e7f76332a]
+
+	Allow specifying the docdir and don't install documentation as executables (patch Michal Marek mmarek@suse.cz) + gcc 4.3 fixes
+
+
+2008-04-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1715bfbf7d79bc9a490baf80d638447163c459a5]
+
+	pkgconfig is needed + polygon instead of polyline
+
+
+2008-03-17  Fridrich Strba  <fridrich.strba@bluewin.ch>  [0bb10d2cad8709b2491406ec72712b9dbce2e87d]
+
+	let autogen.sh not call configure at all
+
+
+2007-12-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [b8ba911097f350c171461d7ec2f3bd442c62a44b]
+
+	fix being overkeen :-)
+
+
+2007-12-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [5f00e472e364ba7fe62a91f5b24d27b64f2e8a1a]
+
+	fix a little warning
+
+
+2007-12-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e5ef4589a5502a15d452360fedb4a12a581ecd64]
+
+	Flip native bitmaps if the corresponding scale parameter is negative
+
+
+2007-12-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [505f3c2c7ef4d90b718102cad2a4ad30ee457d84]
+
+	int is 32 bits on both x86 and x86_64
+
+
+2007-12-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c89ff750a29000a8e41646959287455b4f8d043b]
+
+	a trailing <cr>
+
+
+2007-12-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [b36559fc78d6e4c6da0ece6fb7ff1d5ed62e44d8]
+
+	fixing some issues (forward-port from STABLE-0-1-0)
+
+
+2007-12-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e73892406789154d3765f597bdf70746aaab38c4]
+
+	trying to be a little bit more defensive in the code. To be really rock solid, this needs a lot a lot of refactoring
+
+
+2007-12-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [862eb5473ca9a306c860f0f6fd3c9d223df35e87]
+
+	fix some crashes with bitmap run-length decoding
+
+
+2007-11-23  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2e5a0968ee21cc4db74d61804d4426aef489c6b0]
+
+	adapt to the new shape of the WPXInputStream interface
+
+
+2007-11-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [05cf9525fabd60b5aa60eb78969a8c768d65ac6b]
+
+	some warnings gone
+
+
+2007-10-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a78f7b5a76382f6fcc4a71808a781e0709a62c6f]
+
+	hide the OLE2 bits from the user of libwpg inside the WPGraphics class
+
+
+2007-10-19  Fridrich Strba  <fridrich.strba@bluewin.ch>  [d1dda1c7a0d5378c4fd36f2f1359b376b2a6c67d]
+
+	adapt to the new location of libwpd-stream headers
+
+
+2007-10-19  Fridrich Strba  <fridrich.strba@bluewin.ch>  [6c193fb95fcc66791dab517bb00fa77083779fd1]
+
+	adapt to the reality of libwpd
+
+
+2007-10-19  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a3d2ee790168c3a8fbd0e4f8212e67cc3da5e2de]
+
+	removing some unnecessary use of uint8_t in favour of unsigned char
+
+
+2007-10-08  Fridrich Strba  <fridrich.strba@bluewin.ch>  [cb397cb3f3e1878f04aeb98c020ada795c134959]
+
+	merging fs_experimental into HEAD
+
+
+2007-10-02  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ec5fb04b2ae52c8e3085b08b2a2193e2d7aedfac]
+
+	sometimes, libtoolize is called glibtoolize
+
+
+2007-09-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [f58d63e26731d46122198d2f8a731d20fd170f2b]
+
+	fix building with gcc 4.3
+
+
+2007-09-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e982acda73f3659936118660aad78a7bb219c5a1]
+
+	allow building of docs on win32 if expressely asked
+
+
+2007-09-01  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e2f679dcee3dad28479c0ea865770afc7616d007]
+
+	enable building of static tools
+
+
+2007-09-01  Fridrich Strba  <fridrich.strba@bluewin.ch>  [0b36d011bbb6190b17623338f28847e633331de9]
+
+	oops, forgot this one
+
+
+2007-09-01  Fridrich Strba  <fridrich.strba@bluewin.ch>  [93deefeaa0f8cb6ee578b64fda9c1518d4e09c3a]
+
+	don't break building the resources in multiprocessor build
+
+
+2007-08-30  Fridrich Strba  <fridrich.strba@bluewin.ch>  [9aae8160dff8b4c558e5f176637ec463819fe6fd]
+
+	some little tiny fixes to spec file
+
+
+2007-08-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [808f78a45a3eec71d90a4687e469c976767c6ff0]
+
+	make the zip-generation script again a bit more general + make upx invocation silent
+
+
+2007-08-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [42058c4f5a2d27e43f049e9c2d3943f4a2fd085e]
+
+	doxygen is not a cross tool
+
+
+2007-08-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2dd849ed76b7bd267ca5307ef86d5a30e0c54984]
+
+	this one is autogenerated
+
+
+2007-08-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [7500039f473cd777eb318023d8680be00af88e15]
+
+	and modify also the Changelog
+
+
+2007-08-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e1258a9fbdf77505ae5a7e298c1da89b89a06781]
+
+	make mingw crosscompiling on linux smooth
+
+
+2007-08-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [83b70da10b7f07643854748ec600a47401ef8e81]
+
+	buildnumbers for all\!\!\!
+
+
+2007-08-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [610fee594b3939afeecac180b16c4b32f8752101]
+
+	oops, this line changes all :-)
+
+
+2007-07-17  Fridrich Strba  <fridrich.strba@bluewin.ch>  [5751fd6f64b49effab38d7eae73a477ba85bee8e]
+
+	beware of wpgs where there is no startWPG code: in this case, we don't know about the size of the image anything and we are unlikely to produce something valid
+
+
+2007-07-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [cbbe0d8faa508e7c07db3e0992bb359af4b68a8b]
+
+	trying to cope with corruption and resulting incompleteness of some WPG files
+
+
+2007-07-15  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8e506685479d7e93b28c90617fee995231c57129]
+
+	fix an error in parsing object capsule + add some checks of sanity in parsing the element
+
+
+2007-07-11  Fridrich Strba  <fridrich.strba@bluewin.ch>  [bfa1374bb474df09d546a6344ca7a7fe2f3abcbd]
+
+	don't try to handle bitmaps with esoteric colour format
+
+
+2007-07-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [adb290ae62a91c6ec3644a58687d5f8ec00963ba]
+
+	fixing some issues of RLE decoding with documents of data sample size > 1
+
+
+2007-07-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [b68bc6fd7cab0092d13e79898498ae8a3c9a5c5e]
+
+	fix run-lenght decoding with colour depths less then 4 (more then 1 pixel per byte)
+
+
+2007-07-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [42c3c81dd280853cb2d0e9dc469b2737de37601d]
+
+	avoid possibility to read out of document with uncompressed binary data of color depth < 8
+
+
+2007-07-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [3c284dbd164961cbd1116da82f89654b4e68698b]
+
+	necessary with certain stl implemetations like stlport 5.1
+
+
+2007-07-06  Fridrich Strba  <fridrich.strba@bluewin.ch>  [94be71392acbbc0cbb01463c675c06a493a16ac3]
+
+	win32 bits
+
+
+2007-07-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [54d67be03c606c7ffc6b3cdfed4b335adb9f7108]
+
+	and here
+
+
+2007-07-04  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8f2aade9d7c273e67e7002d694a1e52b319f0272]
+
+	adding the binary data file into makefile.mk
+
+
+2007-07-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [632f64717c31b7ea1fb681aaaad94932833a3824]
+
+	handle embedded image objects in alien file-formats
+
+
+2007-07-03  Fridrich Strba  <fridrich.strba@bluewin.ch>  [fd6fb944c416e21626cd67b89ff6d6ae2eabefc9]
+
+	trying to handle color formats 1, 2 and 3
+
+
+2007-06-28  Fridrich Strba  <fridrich.strba@bluewin.ch>  [b62e91f5a267f10046a6ed453a31e2795dac524b]
+
+	or maybe now at last
+
+
+2007-06-28  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1e35935fd168a0a5a04c1213fd2bdf4077288046]
+
+	this time I should get the base64 encoding right
+
+
+2007-06-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [d0a1cf689e7c2599835dafc6d2fd05c26475eb6c]
+
+	not good this include
+
+
+2007-06-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [9bee91e9df835d2c411e1db5238366043a135a5c]
+
+	some more lazy people simplification
+
+
+2007-06-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a610a41dddd1da3078fa6b2548e23f7790a71698]
+
+	make life easy for lazy people
+
+
+2007-06-21  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8a8647e9628c5ff571c46d687bb3fb6ed6610a7a]
+
+	so, if it is unreachable, why to keep it there? let's avoid unnecessary warnings :-)
+
+
+2007-06-18  Fridrich Strba  <fridrich.strba@bluewin.ch>  [4112b74b72e015dd0181c93b593e9f45244dbe98]
+
+	consider first the library we are actually building instead of a library that might be installed somewhere
+
+
+2007-06-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [82baddbd042669b8fd17f0087eb62144b790c93f]
+
+	rename two callbacks to not conflict with libwpd api
+
+
+2007-06-15  Fridrich Strba  <fridrich.strba@bluewin.ch>  [da9aa455fafd8ef9ae6b76771b040135d882cf20]
+
+	use bitwise operation instead of an arithmetic one
+
+
+2007-06-12  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a1d444737c4c2e66ec7d8b14ccd38c676412eba4]
+
+	finaly, I should get this one right
+
+
+2007-06-12  Fridrich Strba  <fridrich.strba@bluewin.ch>  [932ba2c74197bc5f7c09dc96e1df8e056d3f59fe]
+
+	small fix
+
+
+2007-06-12  Fridrich Strba  <fridrich.strba@bluewin.ch>  [566baa53ba33e45779cb62e1ed8f56e4ef9813c2]
+
+	make svg generation locale independent
+
+
+2007-06-10  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2fff4fc471c01a2869e350831d3aa73d066e6815]
+
+	remove some warnings and make msvc happy
+
+
+2007-06-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [9ec2eb776589a3261edd51091f9efe636ffe40b5]
+
+	adapt the pc files to the reality
+
+
+2007-06-08  Fridrich Strba  <fridrich.strba@bluewin.ch>  [0389d181d3f9ac34f9485aeaec2569049f832e3e]
+
+	added a member function for WPGBitmap that is generating a base64 encoded Device independent bitmap + alpha 1 means opacity, alpha 0 meas complete transparency + add the bitmap support into the SVG output + one little useful function for WPGString class
+
+
+2007-05-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [bff9e5297b672d444573deb1658ac78793c832f9]
+
+	package wpg2svgbatch.pl
+
+
+2007-05-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [153d890d4733fb824b3f26c13d9454837346a01d]
+
+	allow to build against the buffer api without having even the WPXStream.h present
+
+
+2007-05-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8ee795f64e92acca0ba70fe443a9966defb4302f]
+
+	fix the win32 (msvc and mingwin) build
+
+
+2007-05-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [4178aaf06aa2c588217fed108e0ed9fdf87580a5]
+
+	we depend on libwpd header, not on the library as such
+
+
+2007-05-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [cbda53998e783898eae8093b95e3396ed9d66613]
+
+	remove a file tha tis not used
+
+
+2007-05-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [548f67587c7c7ac34de90041ba4aa76f3f92b061]
+
+	a little insignificant renaming
+
+
+2007-05-23  Ariya Hidayat  <ariya@kde.org>  [810f4992a5a861f63714063c808c5f7f25ff5b05]
+
+	decode WPG1 8-bit image properly
+
+
+2007-05-23  Ariya Hidayat  <ariya@kde.org>  [fd08639e635fced31c78df3332741745de7b04c8]
+
+	refactor pixels decoding
+
+
+2007-05-23  Ariya Hidayat  <ariya@kde.org>  [73a653e0178743e23f9f05e34fbff01e34407328]
+
+	refactor RLE decoding
+
+
+2007-05-23  Ariya Hidayat  <ariya@kde.org>  [a72caac9e2e5b14f6318b8bb7c5ea26a8235ad77]
+
+	stub for bitmap type 2
+
+
+2007-05-22  Ariya Hidayat  <ariya@kde.org>  [d37ecd92f17926b55aecb5a942864c143cda7941]
+
+	install the script
+
+
+2007-05-21  Fridrich Strba  <fridrich.strba@bluewin.ch>  [50f87f7e9f0a264e0a8ad7ff079faa5d0c648d6b]
+
+	taking care of some warnings
+
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [8ccf3c0b0894f4b4b51542683e602debbdbdfe45]
+
+	- handle bitmap record type 1 - decode run-length encoded bitmap data - decode 1-bit black-and-white image
+
+	now Perfectspot can load DAVINCI.WPG, FACE.WPG, GEMINI.WPG and DC-10.WPG
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [42b4df45bd93b47898b1731b7dd0ff572cd5e4a3]
+
+	fix wrong delete
+
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [d6a5478e01578bd84f058d71184153d09e393e77]
+
+	fixlet
+
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [00ee7166d204faccb31c74843e72b5f1abc6ebac]
+
+	do the XOR on the scanline if necessary now the bitmap is bright and clear!
+
+
+2007-05-21  Fridrich Strba  <fridrich.strba@bluewin.ch>  [49bbd837c8c361c02c072ad33f2fe648c0712342]
+
+	OK, if convenience function, so convenience function
+
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [3c9e786c04eb80da797ef94b775173dd81384e2a]
+
+	efficient allocation, only reallocate when data size is specified
+
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [0d32a5d3a6c67a7b9fe899ecb613a37e73fc0f0b]
+
+	the most difficult part in bitmap handling: decoding the RLE scanlines it's not 100% finished yet, but it shows something already (in Perfectspot)
+
+
+2007-05-21  Fridrich Strba  <fridrich.strba@bluewin.ch>  [72a796a4d226288c60ca0b397b0f4015da6598e8]
+
+	Ariya, something like this is working for you?
+
+
+2007-05-21  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a0428f390d175f80169ed0eceacf8cd3fa647d33]
+
+	just a little tiny removal of obsolete stuff in the doxygen.cfg file
+
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [c6d3444aa006039bf43a0c82c900ac85ed5e4537]
+
+	fix wrong delete, thanks to fridrich
+
+
+2007-05-21  Ariya Hidayat  <ariya@kde.org>  [a82ccaaa3f027ae7a2128166ce24013afd563ad4]
+
+	handle uncompressed 8-bit indexed bitmap
+
+
+2007-05-20  Ariya Hidayat  <ariya@kde.org>  [cfb6d9d122286e24d22124349c6ad26d787b7c0d]
+
+	batch conversion script
+
+
+2007-05-18  Fridrich Strba  <fridrich.strba@bluewin.ch>  [12fd7c5b8010c7946bc688ba8d9667b3e307af93]
+
+	build patch from Rob Staundinger of AbiWhatever fame :-)
+
+
+2007-05-16  Ariya Hidayat  <ariya@kde.org>  [5ae0bc859a325bb3a7e1b42c3ed4bd4ad3706463]
+
+	use WPGRect
+
+
+2007-05-16  Ariya Hidayat  <ariya@kde.org>  [91ebf58ba05402bb935ee6a35519036ef3631e57]
+
+	manage bitmap geometry
+
+
+2007-05-16  Ariya Hidayat  <ariya@kde.org>  [6e56f93b4f17856374262308555b83c993289205]
+
+	for safety, implement the copy
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [b1ff66dee8fc4c1dbc786b218d8aa5e32599327e]
+
+	put WPGBitmap also for convenience
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [58a4fed936e17a502623edffa314297395648ad1]
+
+	add myself
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [b2df6e0d19dc6a0ec823bb2daab96fe405e2a14a]
+
+	extend the paint interface to draw a bitmap (it's not really used yet, only a stub)
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [27f78419bf224b5c351f6dedb811db02bb0d448a]
+
+	add WPGBitmap class to hold the raster image, still not used yet
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [4fea0d1b9a58ec148cee3d8424ada062a0c3ece9]
+
+	stub for the bitmap data
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [78798e3e12815f04ff21a8847d0fb2670fc75e8d]
+
+	stub to handle bitmap, nothing is really there yet
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [82dc605f40e6a07e4687ac5c50d6d229f9f8312d]
+
+	include its own header first
+
+
+2007-05-15  Ariya Hidayat  <ariya@kde.org>  [5ded1b843bc2d0ce2e31891a31b453e69fd90953]
+
+	fix FSF address
+
+
+2007-05-12  Fridrich Strba  <fridrich.strba@bluewin.ch>  [d43d416f2ccba4f99dd051ff50c34f7d18a576b9]
+
+	not good use this in initialization - bad me
+
+
+2007-05-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [38addf6b90e23f77ff29e784ad432eb2e9a92287]
+
+	Trying to be very tough with warnings
+
+
+2007-05-08  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c81bd39de6d58e527cb614376d08556493a5b003]
+
+	some fixes of bugs that showed when integrating into ooo-build
+
+
+2007-05-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [74b5a8fd2ef8a682328700ad468c3f69b64d3109]
+
+	package correctly the files, remove some warnings in WPGPath.cpp and adjust some more the makefile.mk
+
+
+2007-05-07  Fridrich Strba  <fridrich.strba@bluewin.ch>  [99fa3417398782dd917f2b6ef6fec2834a1a03a3]
+
+	modifying the makefile.mk to correspond to a recent OOo codebase
+
+
+2007-04-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [cb9b2acf00edd085256fe4a6c33a6a9f957d9cf9]
+
+	cleanup
+
+
+2007-04-20  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ef99369fa76c9c42f8f02dccdd15884ebe3ab3ce]
+
+	Make libwpg use WPXInputStream; build docs and package them; make it possible to build --without-stream and --without-docs
+
+
+2007-04-02  Fridrich Strba  <fridrich.strba@bluewin.ch>  [258269f34c782a0bf4a991b56d2819f388d154c8]
+
+	fix rpmbuild on some 64bit systems
+
+
+2006-12-15  Fridrich Strba  <fridrich.strba@bluewin.ch>  [371570afe545f2076c34f4e42dfb26cab8f2be26]
+
+	use WPG defaults in default constructors
+
+
+2006-12-15  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ff9b80004f81111c21fc9cc2d2483b4ff6d8b691]
+
+	some fixes for gradients
+
+
+2006-12-15  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e9fe2128e8eb5de08555157d653878656bb3930f]
+
+	add a cheap WPGString::length() to save abiword some time
+
+
+2006-12-14  Fridrich Strba  <fridrich.strba@bluewin.ch>  [575738dd9635a786ad6748efb1df030ddcb26567]
+
+	this one should be removed as well
+
+
+2006-12-14  Fridrich Strba  <fridrich.strba@bluewin.ch>  [5a51fecd350fbfa5a79d8850118ef0735822aeb9]
+
+	add a new very basic WPGString class + avoid users of libwpg::WPGraphics::generateSVG a need of freeing a pointer they did not allocate
+
+
+2006-12-14  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2466d012fe054868473548cd15a78b0e6e4b5a3b]
+
+	do not inline any method of the API classes
+
+
+2006-12-14  Fridrich Strba  <fridrich.strba@bluewin.ch>  [eccb88162504c1734c0032ce550bc8613b87f895]
+
+	add a little info for users
+
+
+2006-12-14  Fridrich Strba  <fridrich.strba@bluewin.ch>  [edb2f5abbca65b7209c10be97ada8ee803b00464]
+
+	return a C-string allocated on heap instead of a temporary that is not even guaranteed to be there :-) patch Dominic Lachowicz
+
+
+2006-12-13  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a4d81d73ebeb3c4ff1378aa1fbc2a15217ad4260]
+
+	unbreak the DEBUG build
+
+
+2006-12-13  Fridrich Strba  <fridrich.strba@bluewin.ch>  [679cc0868cff7599a001a0f821780c884f907c49]
+
+	add libwpg::WPGraphics::generateSVG function as a courtesy for different applications that support svg already
+
+
+2006-12-13  Fridrich Strba  <fridrich.strba@bluewin.ch>  [069025eb65dc1c623076b7defd3f07ad13adbf3a]
+
+	use a std::ostream instead of printf; also fixes printing  floating point numbers in non-C locales (patch Dominic Lachowicz)
+
+
+2006-11-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [4f27e71516e6cea81f23341f5793331fead2523b]
+
+	removing many warning using -Wall -Weffc++ and -pedantic
+
+
+2006-11-21  Ariya Hidayat  <ariya@kde.org>  [2658b078b9f9cf3b60e7ba4946f37db9d873c424]
+
+	make the constructors explicit
+
+
+2006-10-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a008e37841a6a98f434c178c42259dbc6c5e1fc0]
+
+	The proper fix after reading again the docs :-(
+
+
+2006-10-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [6de15a9ba219714e5d3cf106bf8f24eb2067347d]
+
+	Change in the compound polygon treatment: the members of the group share some of the common characteristics and transform, but the pen and brush can be different for each of them
+
+
+2006-10-18  Fridrich Strba  <fridrich.strba@bluewin.ch>  [5d57dd0fae6ee1f1dde461dec45b53f2e8ba87ac]
+
+	Add a makefile.mk usefull to build libwpg inside OOo build environment
+
+
+2006-10-16  Fridrich Strba  <fridrich.strba@bluewin.ch>  [17bbdb9568d30375dc3419d52944fd042a2ec844]
+
+	some little cleanup
+
+
+2006-09-23  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ff99521ca39e59e745405aa49ffb9da9db88d0a0]
+
+	libwpg-1 --> libwpg-0.1
+
+
+2006-08-17  Fridrich Strba  <fridrich.strba@bluewin.ch>  [3bd97328a4b54c1a27c9eeed806913e3c53bdeeb]
+
+	Make MSVC happy again + remove some warnings + some .cvsignore stuff
+
+
+2006-08-17  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c347f0f7e06f718f0b2b32e160e9180dfcc219e7]
+
+	Do not flatten libwpg namespace, fix msvc build
+
+
+2006-08-13  Ariya Hidayat  <ariya@kde.org>  [b666037fd54c7df677ab66ada3fc24675fa35ab9]
+
+	bye
+
+
+2006-08-13  Ariya Hidayat  <ariya@kde.org>  [8e877deb64aedef040ba3020a2e99d892121d120]
+
+	wpg2odg is now in separate CVS module
+
+
+2006-08-13  Ariya Hidayat  <ariya@kde.org>  [f2a88a764da3c2496a8d0215ae0750b06a984c9a]
+
+	fixed wrong position of circles/ellipses
+
+
+2006-07-30  Ariya Hidayat  <ariya@kde.org>  [9e52135f2241e8afc58d31e65a24f1393b2be085]
+
+	ignore
+
+
+2006-07-30  Ariya Hidayat  <ariya@kde.org>  [9bbbea0d10978a5740994936d371d1dbb1ec23ba]
+
+	this is supported now
+
+
+2006-07-30  Ariya Hidayat  <ariya@kde.org>  [35ae39c088b99df32fc628f31c37122cf2682e51]
+
+	matrix multiplication handled compound polygon properly made paths within compound grouped together fixed gradient colors within DP brush fore color removed redundant debug messages fixed some compiler warnings
+
+
+2006-07-30  Ariya Hidayat  <ariya@kde.org>  [d6de1620e82b3708291dfc9fcadc849338695c14]
+
+	path append and closing
+
+
+2006-07-30  Ariya Hidayat  <ariya@kde.org>  [91eb7d9d1d3bf80f4647683c664d74290464d50f]
+
+	compile wpg2odg
+
+
+2006-07-30  Ariya Hidayat  <ariya@kde.org>  [c67c6fbf7149a0bcb57608298c9178d04cc95d10]
+
+	preliminary wpg2odg, still without stroke and fill
+
+
+2006-07-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2d1d0805353672124abdab5163ef120910d8d7f9]
+
+	Unbreak the build
+
+
+2006-07-11  Ariya Hidayat  <ariya@kde.org>  [add268b5e6ac12c5127b8ef2f3372a83fa8e4686]
+
+	get and parse record extensions (necessary for nested record) stub handler for compound polygon
+
+
+2006-07-10  Ariya Hidayat  <ariya@kde.org>  [7b533e82632d42e604a4be59533e3c6d5e8f0db6]
+
+	fixed s/polyline/polygon reset line ending to (Unix) LF
+
+
+2006-07-10  Ariya Hidayat  <ariya@kde.org>  [3f3412f6563e9e8c1bab0b3b6f922f6cf1c3fab0]
+
+	use the path instead of the low-level curve structure s/polyline/polygon as it can be filled with the brush
+
+
+2006-07-10  Ariya Hidayat  <ariya@kde.org>  [69742755975da09798841c2311f37f84eae2b4de]
+
+	data structure for path
+
+
+2006-07-09  Ariya Hidayat  <ariya@kde.org>  [a379d53e39821ebde2df52484bd4f95f40f72ccb]
+
+	properly parse color in double-precision mode
+
+
+2006-07-09  Ariya Hidayat  <ariya@kde.org>  [327a74c2d6a66e7e560d364bdd2147be6704a0bf]
+
+	read the alpha channel
+
+
+2006-07-09  Fridrich Strba  <fridrich.strba@bluewin.ch>  [1eff51f7add35661be8b9570dda1e9c075a73f75]
+
+	Update MSVC project files + remove certain warnings with GCC and compiler errors with MSVC++ 6.0
+
+
+2006-07-08  Ariya Hidayat  <ariya@kde.org>  [52ef9fb8a90f50475c9f5bd86cb60c9f24a47b76]
+
+	support for alternating and winding fill methods (aka evenodd and nonzero in SVG's fill-rule attribute)
+
+
+2006-07-08  Ariya Hidayat  <ariya@kde.org>  [f3be588b5f1780a15abb78331921c68ab986beef]
+
+	output SVG gradient
+
+
+2006-07-08  Ariya Hidayat  <ariya@kde.org>  [2fb718f7de17ef576a9f75d94c2f33869cdc649d]
+
+	invert the color, fixes for angled gradient
+
+
+2006-07-08  Ariya Hidayat  <ariya@kde.org>  [a69de91243e17c5171ba90607f7d264637bfb72c]
+
+	recognize the gradient angle, adjust the gradient reference point
+
+
+2006-07-08  Ariya Hidayat  <ariya@kde.org>  [7d7d2ee379eb6aa5cbf9bfdce92b103759346fde]
+
+	store gradient angle
+
+
+2006-07-08  Ariya Hidayat  <ariya@kde.org>  [127fd328a228949d0f52d849fcaba04f5eb669cb]
+
+	fixed stupid mistake
+
+
+2006-07-06  Ariya Hidayat  <ariya@kde.org>  [53422a89ce5e3589bd1cf7d4aa04ca1e5cc6c2e8]
+
+	fix compile
+
+
+2006-07-06  Ariya Hidayat  <ariya@kde.org>  [6a64af609f6e65e968421da91119c067af0342db]
+
+	support for very simple horizontal gradient
+
+
+2006-07-06  Ariya Hidayat  <ariya@kde.org>  [766a4ef54649e5c52d27838651fe7838b26b6a69]
+
+	output defs for linear gradient
+
+
+2006-07-06  Ariya Hidayat  <ariya@kde.org>  [056fdea1465bad05bcc58a696425c3b40019bd33]
+
+	dump brush's gradient if exists
+
+
+2006-07-06  Ariya Hidayat  <ariya@kde.org>  [5f2355b5da111ab2227f536dd4fbcd07459524fb]
+
+	include gradient in the brush
+
+
+2006-07-06  Ariya Hidayat  <ariya@kde.org>  [8a51abd223e6d3ea3702aaede1e9dd201524ad62]
+
+	added gradient structure
+
+
+2006-07-05  Ariya Hidayat  <ariya@kde.org>  [9e390f0b4083f6fa00176d0090bb53b5eb19314e]
+
+	parse BrushGradient record
+
+
+2006-07-05  Ariya Hidayat  <ariya@kde.org>  [92148dc96b78e62b3a9aabb409e92e6822f0a6d2]
+
+	let's stay with Unix (LF) line endings only
+
+
+2006-07-04  Ariya Hidayat  <ariya@kde.org>  [c100980298dd54b530ff0c8dd7fb69bee107c387]
+
+	mistake on the gradient colors
+
+
+2006-06-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [221e000d7e4c7e404144701c7d1a28e3a72e37b6]
+
+	Some more unsigned -> signed changes
+
+
+2006-06-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [2d2dac9157664685cfe1fe4901357a9bd5675944]
+
+	The control points and company in polycurve are signed values
+
+
+2006-06-26  Ariya Hidayat  <ariya@kde.org>  [c8fa436d6e2d304972f969d549da3e4e8ec25d3a]
+
+	support object transformation (for translation and rotation)
+
+
+2006-06-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [7bfae1f8233317705d610dac5369852c261def49]
+
+	small tiny fix that influences about nothing
+
+
+2006-06-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [aee1bf9c2bbbcb8610a54026c5a5732daa9651dc]
+
+	Remove libgsf dependency from the .spec file too
+
+
+2006-06-23  Fridrich Strba  <fridrich.strba@bluewin.ch>  [3990d010f28ec1d345ac7cfcbc078d74f034c9bc]
+
+	Caolan's Callcatcher discovered that these functions are never called. So removing them from the WPGOLEStream.cpp
+
+
+2006-06-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [bd93b28514b473ca9fd6d57b299512bf8a5ad808]
+
+	It should be better to generate the libwpg.h with the version information during the configure process. Fix rpm build.
+
+
+2006-06-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [33c9ace7ef9343993904da28ce0b76b37af133ff]
+
+	Removing unused functions from the WPGOLEStream api
+
+
+2006-06-22  Fridrich Strba  <fridrich.strba@bluewin.ch>  [6d2326399166272de76dc94693a509866082e9a9]
+
+	Ole streams implementation using pole of Ariya Hidayat
+
+
+2006-06-21  Fridrich Strba  <fridrich.strba@bluewin.ch>  [61b8ca434487fac637e14ca86425db44ad5e513f]
+
+	Add Memory stream implementation; make wpg2foo ole2 ready; modify some indents
+
+
+2006-06-20  Fridrich Strba  <fridrich.strba@bluewin.ch>  [72a54220026dc73c1aee28113883a612c0d1f74f]
+
+	Reverse engineered WPG1 default palette. It should work now, maybe some errors due to the fact that it was entered manually
+
+
+2006-06-20  Fridrich Strba  <fridrich.strba@bluewin.ch>  [342ff15ba1ceb7e107712ea82fa5ee8c00b3d880]
+
+	First 32 colours should be OK now
+
+
+2006-06-20  Fridrich Strba  <fridrich.strba@bluewin.ch>  [d62e88d6b1390e36a84c436c0879d4c74d946941]
+
+	Another line of WPG1 Palette
+
+
+2006-06-19  Fridrich Strba  <fridrich.strba@bluewin.ch>  [cccb57169543d731986cbde6bf580ca9fc29f274]
+
+	Some more work on WPG1 Palette + some refactoring given that the Palettes for WPG1 and WPG2 are different
+
+
+2006-06-19  Fridrich Strba  <fridrich.strba@bluewin.ch>  [71edfc71803a7b429a1d4c9dbf9368c48cb9ebb8]
+
+	Beginning of work reverse engineering the WPG1 Palette
+
+
+2006-06-18  Fridrich Strba  <fridrich.strba@bluewin.ch>  [32d47c037109d9e4c8aa3d743a196e032cf1132a]
+
+	Separate stream implementation from the rest of the library
+
+
+2006-06-18  Ariya Hidayat  <ariya@kde.org>  [40a41eab0d5c765e0c1245481d3bcddbcaa98cc2]
+
+	sanity check regarding dimension based on patch by Fridrich
+
+
+2006-06-18  Ariya Hidayat  <ariya@kde.org>  [aeb28254124669cd25e81357e7f0a04010b4bc91]
+
+	remove gsf check patch by Fridrich
+
+
+2006-06-17  Ariya Hidayat  <ariya@kde.org>  [85d46cce30878c33a5368d0eba7b5f81bb7ba150]
+
+	fixed configure
+
+
+2006-06-17  Ariya Hidayat  <ariya@kde.org>  [0768c1ebbd4d1e63feebe87600bc979d2ee8241f]
+
+	- important records for WPG2 (pen, brush, lines, curve) - the listener is now PaintInterface, using PostScript-like rendering model - simplified SVG generation (due to the above PaintInterface) - fixed coding style to follow libwpd (tab-indentation, camelcase function names, correct file names, ...) - fixed FSF address - added notices on implementation details
+
+	(first commit for my Google Summer of Code project)
+
+2006-05-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [37a4f96e6063ec7f1294593f12107c7535cdfee7]
+
+	Small cleanup
+
+
+2006-05-24  Fridrich Strba  <fridrich.strba@bluewin.ch>  [a5140a15aba4b641bef082315160eebe97e99db1]
+
+	For purposes of Google SoC, committing my work starting to remove gsf dependency
+
+
+2006-05-13  Fridrich Strba  <fridrich.strba@bluewin.ch>  [5f5c695709ebacb8be13546924c10e655b07690b]
+
+	Add some more people to authors
+
+
+2006-04-29  Fridrich Strba  <fridrich.strba@bluewin.ch>  [38197856547400973c62bf42273d2bf54e664d37]
+
+	And according to specifications, rotation angle cannot be negative
+
+
+2006-04-29  Fridrich Strba  <fridrich.strba@bluewin.ch>  [6d15f643dbec5f485e5531c2d196a1f76170f609]
+
+	small change related to the coordinate transformation lr-bt --> lr-tb
+
+
+2006-04-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [af39a8d498e1bde7e1ae01e593b3f9491fa91f05]
+
+	Some more little fixes of the wpg2svg
+
+
+2006-04-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [8b836f908932436ca23cf4906cfd717cf6c2c3ed]
+
+	WPG coordinates go lr-bt and svg go lr-tb. So convert correctly
+
+
+2005-02-01  Fridrich Strba  <fridrich.strba@bluewin.ch>  [fe282bb1c5e905f22396141dfddf6c0afa6272a8]
+
+	Some more modifications taking in account some of fill and line types
+
+
+2005-01-31  Fridrich Strba  <fridrich.strba@bluewin.ch>  [f00c468ff9f6da575d7da8dff6cfe1fa5f33bc2f]
+
+	Basic colour support for WPG1
+
+
+2005-01-30  Fridrich Strba  <fridrich.strba@bluewin.ch>  [5de86c101052a5c8c04da94caf569c29208723df]
+
+	Pass values in points and not in inches. This solves some problems
+
+
+2005-01-29  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ce12f86331ba4fbc2f921324ac494871fba93850]
+
+	This file had nothing to do here
+
+
+2005-01-28  Fridrich Strba  <fridrich.strba@bluewin.ch>  [00847c2d4794f7eb13e5f44ca3cee455c805b262]
+
+	Conversion of Polyline and Polygon
+
+
+2005-01-28  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ff6e35b80d41af6abe5daf501502260786b6ce10]
+
+	Conversion of WPG1 image size; Adding SVG listener (wpg2svg)
+
+
+2005-01-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [87faddfe9af3e4d6ce68b721269f47a7eb82f03b]
+
+	Update Copyright info
+
+
+2005-01-27  Fridrich Strba  <fridrich.strba@bluewin.ch>  [6d5263a5b0b5381db8259853dc6c68164e19d7c7]
+
+	Refactoring of libwpg; "End WPG" stops the main loop; wpg2raw actually outputs something even if build with --disable-debug
+
+
+2005-01-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [e708094ce231db3e55db412ac3e5a035cdf8eadb]
+
+	Correction of the WPGRecordHeader::ReadVariableLengthInteger function
+
+
+2005-01-26  Fridrich Strba  <fridrich.strba@bluewin.ch>  [c8747181abd54e0986e4ec50af47ef30a8c51d8b]
+
+	Correction of the WPGRecordHeader::ReadVariableLengthInteger function
+
+
+2005-01-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [10f7345f6838c1acf0a86d3312fbd650ffd9fbfa]
+
+	Moving msvc project files
+
+
+2005-01-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [ad7a3a898c4b3b5cda427c418bd59387b18320ad]
+
+	Moving msvc projects
+
+
+2005-01-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [7768fe174683909f20a7c366ad3c0cad287c3a25]
+
+	Removing unnecessary CVSROOT
+
+
+2005-01-25  Fridrich Strba  <fridrich.strba@bluewin.ch>  [b146a8d83b9a397cb48fd661476ba04ce8025d75]
+
+	Parsing WPG1 along with WPG2
+
+
+2004-01-31  Marc Maurer  <uwog@uwog.net>  [5c6097ceeee8944c661ee6a2f3228dc9f9f2c227]
+
+	Windows versioning: add a BUILDNUMBER (Fridrich Strba)
+
+
+2004-01-31  Marc Maurer  <uwog@uwog.net>  [8ad1fbca11cb87acc60d12617bc9eeebb095ab4a]
+
+	MSVC build system && some .cvsignore files (Fridrich Strba)
+
+
+2004-01-28  Marc Maurer  <uwog@uwog.net>  [4fe5cead2850f5c099f97566a2898d1a1a5f3aba]
+
+	The rest of the build system refactoring (Fridrich Strba)
+
+
+2004-01-27  Marc Oude Kotte  <marc@solcon.nl>  [914d79dd7e37f4d45bde83babe19932df9a2c53b]
+
+	Applied Fridrich's patch!
+
+
+2004-01-26  Marc Oude Kotte  <marc@solcon.nl>  [61ffe7e212bbf374ed5ae22a218ff33b09b70e77]
+
+	Initial revision
+
+
+2004-01-22  root  <root>  [f8fb745a539a95914c61e0bfb08ff5085f231ea0]
+
+	initial checkin
+

@@ -1,0 +1,19 @@
+LIBRARY "libcdr.dll"
+
+EXPORTS
+    ??0RVNGFileStream@librevenge@@QAE@PBD@Z
+    ??1RVNGFileStream@librevenge@@UAE@XZ
+    ?isSupported@CDRDocument@libcdr@@SA_NPAVRVNGInputStream@librevenge@@@Z
+    ??0RVNGStringVector@librevenge@@QAE@XZ
+    ??1RVNGStringVector@librevenge@@QAE@XZ
+    ??0RVNGSVGDrawingGenerator@librevenge@@QAE@AAVRVNGStringVector@1@ABVRVNGString@1@@Z
+    ??0RVNGString@librevenge@@QAE@PBD@Z
+    ??1RVNGString@librevenge@@QAE@XZ
+    ??1RVNGSVGDrawingGenerator@librevenge@@UAE@XZ
+    ?parse@CDRDocument@libcdr@@SA_NPAVRVNGInputStream@librevenge@@PAVRVNGDrawingInterface@4@@Z
+    ?size@RVNGStringVector@librevenge@@QBEIXZ
+    ?cstr@RVNGString@librevenge@@QBEPBDXZ
+    ??ARVNGStringVector@librevenge@@QBEABVRVNGString@1@I@Z
+    ?len@RVNGString@librevenge@@QBEHXZ
+    ?isSupported@CMXDocument@libcdr@@SA_NPAVRVNGInputStream@librevenge@@@Z
+    ?parse@CMXDocument@libcdr@@SA_NPAVRVNGInputStream@librevenge@@PAVRVNGDrawingInterface@4@@Z
